@@ -13,14 +13,17 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export function FeaturedAuthor() {
   const author = authors[0];
-  if (!author) return null;
 
+  // All hooks must be called unconditionally at the top level,
+  // before any early return.
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
   const imageY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
+  if (!author) return null;
 
   return (
     <section id="featured-authors" className="section relative overflow-hidden">
