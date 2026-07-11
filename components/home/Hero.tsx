@@ -38,7 +38,7 @@ export function Hero() {
       {/* Background image with parallax */}
       <motion.div style={{ scale }} className="absolute inset-0 -z-20">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[center_35%]"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=2400&q=80')",
@@ -46,16 +46,26 @@ export function Hero() {
         />
       </motion.div>
 
-      {/* Gradients */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/60 via-ink/85 to-ink" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(184,115,51,0.15),transparent_60%)]" />
+      {/* Multi-layer cinematic overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/30 via-ink/70 to-ink" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_20%_50%,rgba(184,115,51,0.22),transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(0,0,0,0.6),transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
 
       {/* Noise overlay */}
-      <div className="absolute inset-0 -z-10 bg-noise opacity-[0.04] mix-blend-overlay" />
+      <div className="absolute inset-0 -z-10 bg-noise opacity-[0.05] mix-blend-overlay" />
+
+      {/* Top editorial rule */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1.4, delay: 0.8, ease }}
+        className="absolute left-6 right-6 top-24 hidden h-px origin-left bg-gradient-to-r from-copper/60 via-white/10 to-transparent md:left-10 md:right-10 md:block"
+      />
 
       <motion.div
         style={{ y, opacity }}
-        className="container-wide relative w-full px-6 pt-32 md:px-10 md:pt-40"
+        className="container-wide relative z-10 w-full px-6 pt-32 md:px-10 md:pt-40"
       >
         <motion.div
           variants={wordContainer}
@@ -63,15 +73,19 @@ export function Hero() {
           animate="show"
           className="max-w-5xl"
         >
-          <motion.span
+          {/* Editorial eyebrow: rule + dot + label */}
+          <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="inline-flex items-center gap-2 rounded-full border border-copper/30 bg-copper/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.3em] text-copper"
+            className="flex items-center gap-4"
           >
-            <span className="h-1 w-1 rounded-full bg-copper" />
-            A Home for Storytellers
-          </motion.span>
+            <span className="h-px w-10 bg-copper" />
+            <span className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.3em] text-copper">
+              <span className="h-1 w-1 rounded-full bg-copper" />
+              A Home for Storytellers
+            </span>
+          </motion.div>
 
           <h1 className="mt-8 font-display text-[clamp(3rem,9vw,8rem)] font-medium leading-[0.95] tracking-tight text-white">
             <span className="block overflow-hidden">
@@ -83,6 +97,7 @@ export function Hero() {
               <motion.span
                 variants={word}
                 className="inline-block bg-gradient-to-r from-copper-200 via-copper to-copper-400 bg-clip-text italic text-transparent"
+                style={{ textShadow: "0 0 40px rgba(184, 115, 51, 0.25)" }}
               >
                 Media
               </motion.span>
@@ -93,7 +108,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted md:text-xl"
+            className="mt-8 max-w-2xl text-pretty text-lg leading-[1.7] text-muted md:text-xl"
           >
             Where authors are truly heard. We celebrate the courage behind every
             great book, spark conversations beyond the page, and connect readers
@@ -104,14 +119,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-12 flex flex-wrap items-center gap-5"
           >
-            <Link href="/#featured-authors" className="btn-primary">
+            <Link
+              href="/#featured-authors"
+              className="btn-primary group/cta"
+            >
               Explore Stories
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
             </Link>
-            <Link href="/contact#submit" className="btn-ghost">
-              <Play className="h-4 w-4" />
+            <Link
+              href="/contact#submit"
+              className="btn-ghost group/play"
+            >
+              <Play className="h-4 w-4 transition-transform duration-300 group-hover/play:scale-110" />
               Become Featured
             </Link>
           </motion.div>
@@ -134,6 +155,14 @@ export function Hero() {
           />
         </motion.div>
       </motion.div>
+
+      {/* Bottom editorial rule */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1.4, delay: 0.9, ease }}
+        className="absolute bottom-10 left-6 right-6 hidden h-px origin-right bg-gradient-to-l from-copper/60 via-white/10 to-transparent md:left-10 md:right-10 md:block"
+      />
     </section>
   );
 }
