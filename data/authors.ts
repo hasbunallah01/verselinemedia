@@ -21,7 +21,7 @@ export const authors: Author[] = [
     summary:
       "The Weight of Tomorrow is a moving contemporary novel by Daniel Whitmore, an author known for writing heartfelt stories about resilience, forgiveness, and second chances. Drawing inspiration from everyday life, Daniel creates emotionally rich characters and meaningful narratives that encourage readers to find hope, healing, and the courage to move forward even in life's most difficult moments.",
     quote:
-      "Being featured by VerseLine Media was one of the most rewarding experiences of my publishing journey. The conversation felt genuine, thoughtful, and personal rather than promotional. The team took the time to understand not only my book but also the experiences and inspirations behind it. Their audience asked meaningful questions, and I left the interview feeling that my story had truly connected with readers. VerseLine Media creates a welcoming space where authors are valued, celebrated, and given the opportunity to share the heart behind their work. I'm grateful to have been part of such a passionate community.",
+      "Being featured by VerseLine Media was one of the most rewarding experiences of my publishing journey. The conversation felt genuine and thoughtful, allowing me to share not only my book but also the inspiration behind it. The team's engaging questions and welcoming approach made the experience truly memorable. I'm grateful to have connected with readers through such a passionate literary community.",
     tags: ["Resilience", "Forgiveness", "Second Chances", "Healing"],
     image: "/authors/daniel-whitmore.png",
     articleUrl: "/articles/daniel-whitmore",
