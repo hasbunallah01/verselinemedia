@@ -140,15 +140,29 @@ export function FeaturedAuthor() {
                 aria-hidden
               />
 
-              <motion.blockquote
+              <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: 0.55, ease }}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="h-px w-8 bg-copper" aria-hidden />
+                  <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-copper">
+                    VerseLine Media Experience:
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.blockquote
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: 0.6, ease }}
                 className="font-display text-lg leading-[1.5] text-white/90 italic"
               >
                 <span className="text-copper not-italic">“</span>
-                {author.quote.slice(0, 200)}…
+                {author.quote}
                 <span className="text-copper not-italic">”</span>
               </motion.blockquote>
 
