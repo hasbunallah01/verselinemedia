@@ -26,4 +26,18 @@ export const authors: Author[] = [
     image: "/authors/daniel-whitmore.png",
     articleUrl: "/articles/daniel-whitmore",
   },
+  {
+    id: "elizabeth-marlowe",
+    name: "Elizabeth Marlowe",
+    book: "The Light We Carry",
+    genre: "Contemporary Fiction",
+    year: 2024,
+    summary:
+      "The Light We Carry is a story I wrote to remind readers that hope can still be found, even in life's most difficult moments. As an author, I'm passionate about writing heartfelt stories centered on healing, resilience, and new beginnings. Through relatable characters and authentic emotions, I hope my books encourage readers to find strength, embrace change, and believe that brighter days are always ahead.",
+    quote:
+      "Being featured on VerseLine Media was a truly memorable experience. The interview was thoughtful, engaging, and gave me the opportunity to share the heart behind my book. The team created such a welcoming atmosphere, and connecting with readers through their platform was both meaningful and inspiring. I'm grateful to have been part of the VerseLine Media community.",
+    tags: ["Hope", "Healing", "Resilience", "New Beginnings"],
+    image: "/authors/elizabeth-marlowe.png",
+    articleUrl: "/articles/elizabeth-marlowe",
+  },
 ];
