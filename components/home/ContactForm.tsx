@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Mail, Clock, Loader2 } from "lucide-react";
+import { CheckCircle2, Mail, Loader2 } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { site } from "@/data/site";
@@ -67,20 +67,6 @@ export function ContactSection() {
                   >
                     {site.email}
                   </a>
-                </div>
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-6">
-              <div className="flex items-start gap-4">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-copper/10 text-copper ring-1 ring-copper/30">
-                  <Clock className="h-4 w-4" />
-                </span>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-muted">
-                    Office hours
-                  </p>
-                  <p className="mt-1 text-white">{site.hours}</p>
                 </div>
               </div>
             </GlassCard>

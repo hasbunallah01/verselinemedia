@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, MapPin, MessageCircle, Twitter, Youtube, Facebook } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Twitter, Youtube, Facebook } from "lucide-react";
 import { ContactSection } from "@/components/home/ContactForm";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
@@ -17,11 +17,6 @@ const contactCards = [
     title: "Email",
     body: site.email,
     href: `mailto:${site.email}`,
-  },
-  {
-    icon: Clock,
-    title: "Office hours",
-    body: site.hours,
   },
   {
     icon: MapPin,
