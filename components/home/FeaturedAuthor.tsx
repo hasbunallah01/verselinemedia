@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -28,6 +28,21 @@ export function FeaturedAuthor() {
 
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-advance to the next author every 5s.
+  // Pauses while the user is hovering over the card.
+  // Re-arms whenever the slide changes (including on manual click),
+  // so a fresh 5s window starts after every interaction.
+  // Must be declared above the early return to satisfy Rules of Hooks.
+  useEffect(() => {
+    if (authors.length <= 1 || isHovered) return;
+    const id = window.setInterval(() => {
+      setDirection(1);
+      setIndex((prev) => (prev + 1) % authors.length);
+    }, 5000);
+    return () => window.clearInterval(id);
+  }, [index, isHovered]);
 
   if (authors.length === 0) return null;
 
@@ -64,7 +79,12 @@ export function FeaturedAuthor() {
           transition={{ duration: 0.8, ease }}
           className="relative mt-20"
         >
-          <GlassCard hover className="relative overflow-hidden">
+          <GlassCard
+            hover
+            className="relative overflow-hidden"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <AnimatePresence mode="wait" custom={direction} initial={false}>
               <motion.div
                 key={author.id}
