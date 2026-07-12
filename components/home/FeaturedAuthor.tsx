@@ -159,7 +159,7 @@ export function FeaturedAuthor() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: 0.6, ease }}
-                className="font-display text-lg leading-[1.5] text-white/90 italic"
+                className="font-sans text-sm leading-[1.65] text-white/85 italic"
               >
                 <span className="text-copper not-italic">“</span>
                 {author.quote}
