@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, MessageCircle, Twitter, Youtube, Facebook } from "lucide-react";
+import { Mail, MessageCircle, Twitter, Youtube, Facebook } from "lucide-react";
 import { ContactSection } from "@/components/home/ContactForm";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
@@ -17,11 +17,6 @@ const contactCards = [
     title: "Email",
     body: site.email,
     href: `mailto:${site.email}`,
-  },
-  {
-    icon: MapPin,
-    title: "Studio",
-    body: "Remote-first · London · New York",
   },
   {
     icon: MessageCircle,
@@ -59,7 +54,7 @@ export default function ContactPage() {
 
       <section className="section pt-8">
         <div className="container-wide">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {contactCards.map((c) => (
               <GlassCard key={c.title} hover className="p-6">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-copper/10 text-copper ring-1 ring-copper/30">
