@@ -12,7 +12,6 @@ import { BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { authors } from "@/data/authors";
-import { AnimatedButton } from "@/components/ui/AnimatedButton";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -206,23 +205,6 @@ export function FeaturedAuthor() {
                     {author.quote}
                     <span className="text-copper not-italic">”</span>
                   </motion.blockquote>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.45, ease }}
-                    className="pt-2"
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="h-px w-8 bg-copper/50" aria-hidden />
-                      <AnimatedButton
-                        href={author.articleUrl}
-                        variant="primary"
-                      >
-                        Read full article
-                      </AnimatedButton>
-                    </div>
-                  </motion.div>
                 </div>
               </motion.div>
             </AnimatePresence>
