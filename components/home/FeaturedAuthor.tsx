@@ -30,17 +30,17 @@ export function FeaturedAuthor() {
   const [direction, setDirection] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Auto-advance to the next author every 5s.
+  // Auto-advance to the next author every 10s.
   // Pauses while the user is hovering over the card.
   // Re-arms whenever the slide changes (including on manual click),
-  // so a fresh 5s window starts after every interaction.
+  // so a fresh 10s window starts after every interaction.
   // Must be declared above the early return to satisfy Rules of Hooks.
   useEffect(() => {
     if (authors.length <= 1 || isHovered) return;
     const id = window.setInterval(() => {
       setDirection(1);
       setIndex((prev) => (prev + 1) % authors.length);
-    }, 5000);
+    }, 10000);
     return () => window.clearInterval(id);
   }, [index, isHovered]);
 
