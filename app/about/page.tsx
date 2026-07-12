@@ -82,8 +82,7 @@ const rules = [
   },
 ];
 
-const aboutImage =
-  "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=80";
+const aboutImage = "/about-who-we-are.webp";
 
 const socialLinks = [
   { label: "X", href: site.socials.twitter, Icon: Twitter },
