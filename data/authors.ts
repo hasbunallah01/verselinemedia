@@ -40,4 +40,18 @@ export const authors: Author[] = [
     image: "/authors/elizabeth-marlowe.png",
     articleUrl: "/articles/elizabeth-marlowe",
   },
+  {
+    id: "claire-bennett",
+    name: "Claire Bennett",
+    book: "Whispers of Tomorrow",
+    genre: "Contemporary Fiction",
+    year: 2024,
+    summary:
+      "Whispers of Tomorrow is a novel I wrote for anyone who has ever struggled to let go of the past while holding on to hope for the future. As an author, I love creating emotionally driven stories about family, healing, courage, and second chances. My greatest joy is knowing that my books encourage readers to keep believing in themselves, even through life's most challenging seasons.",
+    quote:
+      "Being featured on VerseLine Media was such a meaningful experience for me. From the moment the conversation began, I felt welcomed and genuinely heard. It wasn't just about promoting my book, it was about sharing the heart behind my writing and connecting with readers on a personal level. I'm truly grateful to the VerseLine Media team for creating a space where authors and their stories are celebrated with authenticity and care.",
+    tags: ["Family", "Healing", "Courage", "Second Chances"],
+    image: "/authors/claire-bennett.png",
+    articleUrl: "/articles/claire-bennett",
+  },
 ];
