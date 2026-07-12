@@ -9,12 +9,9 @@ export const site = {
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
-    instagram: "https://instagram.com/verselinemedia",
     twitter: "https://twitter.com/verselinemedia",
-    facebook: "https://facebook.com/verselinemedia",
+    facebook: "https://www.facebook.com/share/1CtEHvGnTj/",
     youtube: "https://youtube.com/@verselinemedia",
-    tiktok: "https://tiktok.com/@verselinemedia",
-    linkedin: "https://linkedin.com/company/verselinemedia",
   },
   nav: [
     { label: "Home", href: "/" },

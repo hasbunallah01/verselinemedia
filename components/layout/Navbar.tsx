@@ -98,7 +98,12 @@ export function Navbar() {
             >
               Log in
             </Link>
-            <Link href="/contact#submit" className="btn-primary !py-2 !px-5">
+            <Link
+              href="https://form.jotform.com/261917650330050"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-primary !py-2 !px-5"
+            >
               Get Featured
             </Link>
           </div>
@@ -165,7 +170,12 @@ export function Navbar() {
                 <Link href="/contact" className="btn-ghost w-full">
                   Log in
                 </Link>
-                <Link href="/contact#submit" className="btn-primary w-full">
+                <Link
+                  href="https://form.jotform.com/261917650330050"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="btn-primary w-full"
+                >
                   Get Featured
                 </Link>
               </div>

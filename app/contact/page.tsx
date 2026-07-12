@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, MapPin, MessageCircle, Instagram, Twitter, Youtube, Facebook } from "lucide-react";
+import { Mail, Clock, MapPin, MessageCircle, Twitter, Youtube, Facebook } from "lucide-react";
 import { ContactSection } from "@/components/home/ContactForm";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
@@ -37,7 +37,6 @@ const contactCards = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, label: "Instagram", href: site.socials.instagram },
   { icon: Twitter, label: "Twitter / X", href: site.socials.twitter },
   { icon: Youtube, label: "YouTube", href: site.socials.youtube },
   { icon: Facebook, label: "Facebook", href: site.socials.facebook },

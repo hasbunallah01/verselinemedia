@@ -129,7 +129,9 @@ export function Hero() {
               <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-out group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
             </Link>
             <Link
-              href="/contact#submit"
+              href="https://form.jotform.com/261917650330050"
+              target="_blank"
+              rel="noreferrer noopener"
               className="btn-ghost group/play"
             >
               <Play className="h-4 w-4 transition-transform duration-300 group-hover/play:scale-110" />

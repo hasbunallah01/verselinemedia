@@ -1,22 +1,16 @@
 import Link from "next/link";
 import {
-  Instagram,
   Twitter,
   Facebook,
   Youtube,
-  Linkedin,
-  Music2,
   BookOpen,
 } from "lucide-react";
 import { site } from "@/data/site";
 
 const socialIcons = {
-  instagram: Instagram,
   twitter: Twitter,
   facebook: Facebook,
   youtube: Youtube,
-  tiktok: Music2,
-  linkedin: Linkedin,
 } as const;
 
 export function Footer() {
