@@ -21,8 +21,8 @@ const contactCards = [
   {
     icon: MessageCircle,
     title: "Press & partnerships",
-    body: "press@verselinemedia.com",
-    href: "mailto:press@verselinemedia.com",
+    body: "press@verselinemedia.online",
+    href: "mailto:press@verselinemedia.online",
   },
 ];
 
