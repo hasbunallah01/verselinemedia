@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Mail, Loader2 } from "lucide-react";
+import { CheckCircle2, Mail, Loader2, AlertCircle } from "lucide-react";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { site } from "@/data/site";
@@ -22,6 +22,7 @@ type FormData = z.infer<typeof schema>;
 export function ContactSection() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const {
     register,
@@ -32,13 +33,34 @@ export function ContactSection() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: FormData) => {
     setSubmitting(true);
-    // Simulate network — wire to your backend / Formspree / Resend here
-    await new Promise((r) => setTimeout(r, 900));
-    setSubmitting(false);
-    setSent(true);
-    reset();
+    setErrorMessage(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const payload = (await res.json().catch(() => null)) as
+        | { ok: boolean; error?: string }
+        | null;
+      if (!res.ok || !payload?.ok) {
+        throw new Error(
+          payload?.error ?? "Something went wrong. Please try again.",
+        );
+      }
+      setSent(true);
+      reset();
+    } catch (err) {
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -137,6 +159,16 @@ export function ContactSection() {
                       register={register}
                       error={errors.message?.message}
                     />
+
+                    {errorMessage && (
+                      <div
+                        role="alert"
+                        className="flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                      >
+                        <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                        <span>{errorMessage}</span>
+                      </div>
+                    )}
 
                     <button
                       type="submit"
