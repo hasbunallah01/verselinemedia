@@ -88,6 +88,9 @@ export const spotlight = {
   eyebrow: "Featured Spotlight",
   title: "Live Today with Elena Marlowe",
   subtitle: "NYT Bestselling Author",
+  bookTitle: "Beneath the Silence",
+  bookCover:
+    "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80",
   cta: { label: "Watch Live Now", href: "/conversations" },
   image:
     "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1200&q=80",

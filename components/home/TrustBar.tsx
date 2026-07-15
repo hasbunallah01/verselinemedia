@@ -21,7 +21,7 @@ export function TrustBar() {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-12">
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-y-6 md:grid-cols-4 md:divide-x md:divide-mist">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -29,7 +29,7 @@ export function TrustBar() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="text-center"
+                className="px-6 text-center md:px-10"
               >
                 <p className="font-display text-2xl font-bold text-forest md:text-3xl">
                   <AnimatedCounter value={stat.value} />

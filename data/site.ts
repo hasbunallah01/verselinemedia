@@ -18,7 +18,8 @@ export const site = {
     { label: "About Us", href: "/about" },
     { label: "What We Do", href: "/#what-we-do" },
     { label: "How It Works", href: "/#how-it-works" },
-    { label: "Conversations", href: "/conversations" },
+    { label: "Author Guide", href: "/#how-it-works" },
+    { label: "Resources", href: "/#faq" },
     { label: "Contact", href: "/contact" },
   ],
   footerLinks: {

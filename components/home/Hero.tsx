@@ -16,7 +16,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="eyebrow"
+            className="text-[12px] font-medium uppercase tracking-[0.22em] text-charcoal/55"
           >
             {hero.eyebrow}
           </motion.p>

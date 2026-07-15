@@ -7,6 +7,7 @@ import { Plus } from "lucide-react";
 import { faqs } from "@/data/faqs";
 import { faqImage } from "@/data/home";
 import { cn } from "@/lib/utils";
+import { MobileCollapsible } from "@/components/ui/MobileCollapsible";
 
 export function FAQPreview() {
   const [openId, setOpenId] = useState<string | null>(faqs[0]?.id ?? null);
@@ -14,7 +15,9 @@ export function FAQPreview() {
 
   return (
     <section id="faq" className="section bg-ivory">
-      <div className="container-wide grid items-start gap-12 lg:grid-cols-2">
+      <div className="container-wide">
+      <MobileCollapsible title="Frequently Asked Questions">
+      <div className="grid items-start gap-12 lg:grid-cols-2">
         {/* Accordion */}
         <div>
           <motion.h2
@@ -22,7 +25,7 @@ export function FAQPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="font-display text-3xl font-bold md:text-4xl"
+            className="hidden font-display text-3xl font-bold md:text-4xl lg:block"
           >
             Frequently Asked Questions
           </motion.h2>
@@ -89,6 +92,8 @@ export function FAQPreview() {
             loading="lazy"
           />
         </motion.div>
+      </div>
+      </MobileCollapsible>
       </div>
     </section>
   );
