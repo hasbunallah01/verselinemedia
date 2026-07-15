@@ -1,19 +1,31 @@
 import { Hero } from "@/components/home/Hero";
-import { Welcome } from "@/components/home/Welcome";
-import { FeaturedAuthor } from "@/components/home/FeaturedAuthor";
-import { Awards } from "@/components/home/Awards";
-import { FAQ } from "@/components/home/FAQ";
-import { ContactSection } from "@/components/home/ContactForm";
+import { FeaturedConversation } from "@/components/home/FeaturedConversation";
+import { TrustBar } from "@/components/home/TrustBar";
+import { WhyVerseLine } from "@/components/home/WhyVerseLine";
+import { WhatWeDo } from "@/components/home/WhatWeDo";
+import { FeaturedSpotlight } from "@/components/home/FeaturedSpotlight";
+import { HowItWorks } from "@/components/home/HowItWorks";
+import { WhyAuthorsChooseUs } from "@/components/home/WhyAuthorsChooseUs";
+import { Testimonials } from "@/components/home/Testimonials";
+import { FAQPreview } from "@/components/home/FAQPreview";
+import { CTABanner } from "@/components/home/CTABanner";
+import { StayInspired } from "@/components/home/Newsletter";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <Welcome />
-      <FeaturedAuthor />
-      <Awards />
-      <ContactSection />
-      <FAQ />
+      <FeaturedConversation />
+      <TrustBar />
+      <WhyVerseLine />
+      <WhatWeDo />
+      <FeaturedSpotlight />
+      <HowItWorks />
+      <WhyAuthorsChooseUs />
+      <Testimonials />
+      <FAQPreview />
+      <CTABanner />
+      <StayInspired />
     </>
   );
 }

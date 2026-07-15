@@ -2,7 +2,7 @@ export const site = {
   name: "VerseLine Media",
   tagline: "A Home for Storytellers",
   description:
-    "VerseLine Media celebrates the courage behind every great book, sparks conversations that go beyond the page, and brings together a community of readers united by their love for powerful stories.",
+    "VerseLine Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
   url: "https://verselinemedia.online",
   email: "hello@verselinemedia.online",
   phone: "",
@@ -15,9 +15,31 @@ export const site = {
   },
   nav: [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Featured Authors", href: "/#featured-authors" },
-    { label: "Awards", href: "/#awards" },
+    { label: "About Us", href: "/about" },
+    { label: "What We Do", href: "/#what-we-do" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Conversations", href: "/conversations" },
     { label: "Contact", href: "/contact" },
   ],
+  footerLinks: {
+    quickLinks: [
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about" },
+      { label: "What We Do", href: "/#what-we-do" },
+      { label: "How It Works", href: "/#how-it-works" },
+      { label: "Conversations", href: "/conversations" },
+    ],
+    resources: [
+      { label: "Author Kit", href: "/contact" },
+      { label: "Interview Tips", href: "/#faq" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Events", href: "/conversations" },
+    ],
+    support: [
+      { label: "Contact Us", href: "/contact" },
+      { label: "Submit Your Story", href: "/contact" },
+      { label: "Privacy Policy", href: "/" },
+      { label: "Terms & Conditions", href: "/" },
+    ],
+  },
 } as const;

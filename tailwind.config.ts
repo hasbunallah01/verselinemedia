@@ -9,6 +9,39 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /* ===== Reference design system ===== */
+        forest: {
+          DEFAULT: "#23463F",
+          50: "#EDF2F0",
+          100: "#D2DFDB",
+          200: "#A6BFB8",
+          300: "#7A9F94",
+          400: "#4E7268",
+          500: "#23463F",
+          600: "#1D3B35",
+          700: "#172F2A",
+          800: "#11231F",
+          900: "#0B1715",
+        },
+        bronze: {
+          DEFAULT: "#B8782E",
+          50: "#F9F1E6",
+          100: "#F0DEC2",
+          200: "#E2BE85",
+          300: "#D39E52",
+          400: "#C58B3D",
+          500: "#B8782E",
+          600: "#966125",
+          700: "#734A1C",
+          800: "#513413",
+          900: "#2F1E0B",
+        },
+        sage: { DEFAULT: "#A8B7A1", light: "#C5D0C0" },
+        charcoal: "#222222",
+        ivory: "#FAF7F2",
+        stone: "#F1ECE5",
+        mist: "#E7E4DD",
+        /* ===== Legacy tokens (kept for About/Contact until redesigned) ===== */
         ink: {
           DEFAULT: "#0B0B0B",
           50: "#171717",
@@ -37,14 +70,12 @@ const config: Config = {
         display: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-copper":
-          "linear-gradient(135deg, #B87333 0%, #DC9556 50%, #B87333 100%)",
-      },
       boxShadow: {
+        card: "0 2px 12px -2px rgba(34, 34, 34, 0.06), 0 8px 32px -8px rgba(34, 34, 34, 0.08)",
+        "card-hover":
+          "0 4px 16px -2px rgba(34, 34, 34, 0.08), 0 16px 48px -12px rgba(34, 34, 34, 0.14)",
         "glow-copper": "0 0 60px -10px rgba(184, 115, 51, 0.5)",
-        "glass": "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+        glass: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
       },
       keyframes: {
         "fade-up": {
@@ -55,20 +86,10 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "shimmer": {
-          "0%": { backgroundPosition: "-1000px 0" },
-          "100%": { backgroundPosition: "1000px 0" },
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out forwards",
         "fade-in": "fade-in 0.8s ease-out forwards",
-        "shimmer": "shimmer 3s linear infinite",
-        "float": "float 6s ease-in-out infinite",
       },
     },
   },

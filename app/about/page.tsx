@@ -92,7 +92,7 @@ const socialLinks = [
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="dark-page">
       {/* Hero */}
       <section className="section pt-40">
         <div className="container-narrow text-center">
@@ -291,6 +291,6 @@ export default function AboutPage() {
           </GlassCard>
         </div>
       </section>
-    </>
+    </div>
   );
 }

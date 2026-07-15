@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { site } from "@/data/site";
+import { Logo } from "@/components/ui/Logo";
 import { cn } from "@/lib/utils";
-
-const EASE_OUT_EXPO = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,149 +39,104 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,padding,box-shadow,border-color] duration-500 ease-out",
+          "fixed top-0 left-0 right-0 z-50 border-b bg-white transition-shadow duration-300",
           scrolled
-            ? "bg-ink/70 backdrop-blur-2xl border-b border-white/[0.06] py-3 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.55)]"
-            : "bg-transparent border-b border-transparent py-5"
+            ? "border-mist shadow-[0_4px_20px_-8px_rgba(34,34,34,0.12)]"
+            : "border-mist/60",
         )}
       >
-        <div className="container-wide flex items-center justify-between gap-8 px-6 md:px-10">
-          <Link
-            href="/"
-            className="group flex items-center gap-2.5"
-            aria-label={site.name}
-          >
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-copper/10 ring-1 ring-copper/30 transition group-hover:bg-copper/20">
-              <BookOpen className="h-4 w-4 text-copper" />
-            </span>
-            <span className="font-display text-base font-medium tracking-wide text-white">
-              VerseLine<span className="text-copper">.</span>
-            </span>
-          </Link>
+        <div className="container-wide flex items-center justify-between gap-6 px-6 py-3.5 md:px-10">
+          <Logo />
 
-          <nav className="hidden items-center md:flex">
+          {/* Desktop nav */}
+          <nav
+            aria-label="Primary"
+            className="hidden items-center gap-7 lg:flex"
+          >
             {site.nav.map((item) => {
-              const active = pathname === item.href;
+              const active =
+                item.href === pathname ||
+                (item.href !== "/" && pathname.startsWith(item.href));
               return (
                 <Link
-                  key={item.href}
+                  key={item.label}
                   href={item.href}
                   className={cn(
-                    "group relative px-4 py-2 text-sm tracking-wide transition-colors duration-300",
-                    active ? "text-white" : "text-muted hover:text-white"
+                    "text-[13px] font-medium transition-colors hover:text-forest",
+                    active ? "text-forest" : "text-charcoal/75",
                   )}
                 >
-                  <span className="relative z-10">{item.label}</span>
-                  {!active && (
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute left-4 right-4 -bottom-0.5 h-px origin-left scale-x-0 transform bg-copper/70 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100"
-                    />
-                  )}
-                  {active && (
-                    <motion.span
-                      layoutId="nav-underline"
-                      className="absolute left-4 right-4 -bottom-0.5 h-px bg-copper"
-                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                    />
-                  )}
+                  {item.label}
                 </Link>
               );
             })}
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <Link
-              href="/contact"
-              className="text-sm text-muted transition hover:text-white"
-            >
-              Log in
+          <div className="flex items-center gap-3">
+            <Link href="/contact" className="btn-forest hidden !py-2.5 lg:inline-flex">
+              Submit Your Story
             </Link>
-            <Link
-              href="https://form.jotform.com/261917650330050"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="btn-primary !py-2 !px-5"
-            >
-              Get Featured
-            </Link>
-          </div>
 
-          <button
-            type="button"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] transition-colors hover:bg-white/[0.08] md:hidden"
-          >
-            {open ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </button>
+            {/* Mobile toggle */}
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-label={open ? "Close menu" : "Open menu"}
+              className="grid h-10 w-10 place-items-center rounded-md border border-mist text-charcoal lg:hidden"
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </motion.header>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: EASE_OUT_EXPO }}
-            className="fixed inset-0 z-40 md:hidden"
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-40 bg-ivory pt-24 lg:hidden"
           >
-            <div
-              className="absolute inset-0 bg-ink/80 backdrop-blur-2xl"
-              onClick={() => setOpen(false)}
-            />
-            <motion.nav
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.6, ease: EASE_OUT_EXPO }}
-              className="absolute right-0 top-0 flex h-full w-full max-w-sm flex-col gap-6 border-l border-white/10 bg-ink-50/95 p-8 pt-24 backdrop-blur-2xl"
+            <nav
+              aria-label="Mobile"
+              className="flex flex-col gap-1 px-6"
             >
               {site.nav.map((item, i) => (
                 <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, x: 24 }}
+                  key={item.label}
+                  initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    delay: 0.15 + i * 0.06,
-                    duration: 0.5,
-                    ease: EASE_OUT_EXPO,
-                  }}
+                  transition={{ delay: 0.05 * i, duration: 0.3 }}
                 >
                   <Link
                     href={item.href}
-                    className="group relative inline-block font-display text-3xl text-white transition-colors duration-300 hover:text-copper"
+                    className="block border-b border-mist py-4 font-display text-xl text-charcoal transition-colors hover:text-forest"
                   >
                     {item.label}
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute -bottom-1 left-0 h-px w-0 bg-copper transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-full"
-                    />
                   </Link>
                 </motion.div>
               ))}
-              <div className="mt-auto flex flex-col gap-3">
-                <Link href="/contact" className="btn-ghost w-full">
-                  Log in
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35, duration: 0.3 }}
+                className="pt-6"
+              >
+                <Link href="/contact" className="btn-forest w-full">
+                  Submit Your Story
                 </Link>
-                <Link
-                  href="https://form.jotform.com/261917650330050"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="btn-primary w-full"
-                >
-                  Get Featured
-                </Link>
-              </div>
-            </motion.nav>
+              </motion.div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Spacer so content clears the solid fixed navbar */}
+      <div aria-hidden className="h-[68px]" />
     </>
   );
 }

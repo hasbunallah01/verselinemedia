@@ -34,7 +34,7 @@ const socialLinks = [
 
 export default function ContactPage() {
   return (
-    <>
+    <div className="dark-page">
       <section className="section pt-40">
         <div className="container-narrow text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-copper/30 bg-copper/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.3em] text-copper">
@@ -109,6 +109,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

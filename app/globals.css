@@ -4,15 +4,14 @@
 
 @layer base {
   :root {
-    --background: 11 11 11;
-    --foreground: 255 255 255;
-    --muted: 184 184 184;
-    --border: 45 45 45;
-    --copper: 184 115 51;
+    --background: 250 247 242; /* Warm Ivory */
+    --foreground: 34 34 34; /* Rich Charcoal */
+    --forest: 35 70 63;
+    --bronze: 184 120 46;
   }
 
   * {
-    @apply border-ink-300;
+    @apply border-mist;
   }
 
   html {
@@ -22,26 +21,72 @@
   }
 
   body {
-    @apply bg-ink text-white font-sans selection:bg-copper/30 selection:text-white;
-    background-image: radial-gradient(
-        circle at 20% 0%,
-        rgba(184, 115, 51, 0.08) 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at 80% 100%,
-        rgba(184, 115, 51, 0.05) 0%,
-        transparent 50%
-      );
-    background-attachment: fixed;
+    @apply bg-ivory text-charcoal font-sans selection:bg-forest/15 selection:text-forest;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight text-charcoal;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
 
 @layer components {
+  .section {
+    @apply relative py-16 md:py-24 px-6 md:px-10;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .eyebrow {
+    @apply text-[12px] font-medium uppercase tracking-[0.22em] text-bronze;
+  }
+
+  /* Reference buttons */
+  .btn-forest {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-forest px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-forest-600 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+  }
+
+  .btn-bronze {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-bronze px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-bronze-600 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bronze;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-charcoal/20 bg-transparent px-6 py-3 text-sm font-medium text-charcoal transition-all duration-300 hover:border-forest hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/40 bg-transparent px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+
+  .card-light {
+    @apply rounded-xl border border-mist bg-white shadow-card transition-shadow duration-300;
+  }
+
+  /* ===== Legacy dark-theme helpers (About/Contact until redesigned) ===== */
+  .dark-page {
+    @apply bg-ink text-white;
+  }
+
+  .dark-page h1,
+  .dark-page h2,
+  .dark-page h3,
+  .dark-page h4,
+  .dark-page h5,
+  .dark-page h6 {
+    @apply text-white;
+  }
+
   .glass {
     @apply bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-glass;
   }
@@ -53,18 +98,6 @@
   .gradient-text {
     @apply bg-gradient-to-r from-white via-copper-200 to-copper bg-clip-text text-transparent;
     background-size: 200% auto;
-  }
-
-  .section {
-    @apply relative py-24 md:py-32 px-6 md:px-10;
-  }
-
-  .container-narrow {
-    @apply max-w-5xl mx-auto;
-  }
-
-  .container-wide {
-    @apply max-w-7xl mx-auto;
   }
 
   .divider-copper {
@@ -87,9 +120,5 @@
 
   .text-pretty {
     text-wrap: pretty;
-  }
-
-  .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
   }
 }
