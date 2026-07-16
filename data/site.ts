@@ -16,10 +16,7 @@ export const site = {
   nav: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "What We Do", href: "/#what-we-do" },
-    { label: "How It Works", href: "/#how-it-works" },
-    { label: "Author Guide", href: "/#how-it-works" },
-    { label: "Resources", href: "/#faq" },
+    { label: "Live Conversations", href: "/conversations" },
     { label: "Contact", href: "/contact" },
   ],
   footerLinks: {
