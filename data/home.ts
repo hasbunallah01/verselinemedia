@@ -242,7 +242,7 @@ export const ctaBanner = {
   title: "Share Your Story. Inspire the World.",
   description:
     "Join VerseLine Media and connect with readers through the power of live conversation.",
-  primaryCta: { label: "Submit Your Story", href: "/contact" },
+  primaryCta: { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Learn More", href: "/about" },
   image:
     "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",

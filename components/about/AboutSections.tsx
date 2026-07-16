@@ -400,10 +400,15 @@ export function AboutCTA() {
               {aboutCta.description}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={aboutCta.primaryCta.href} className="btn-bronze">
+              <a
+                href={aboutCta.primaryCta.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="btn-bronze"
+              >
                 {aboutCta.primaryCta.label}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <Link
                 href={aboutCta.secondaryCta.href}
                 className="btn-outline-light"

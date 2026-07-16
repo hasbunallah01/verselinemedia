@@ -392,7 +392,7 @@ export const aboutCta = {
   title: "Your story can inspire more than you know.",
   description:
     "Join the next live author spotlight and share your message with the world.",
-  primaryCta: { label: "Share Your Story", href: "/contact" },
+  primaryCta: { label: "Share Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Contact Us", href: "/contact" },
   image:
     "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",

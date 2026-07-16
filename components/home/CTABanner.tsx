@@ -26,10 +26,15 @@ export function CTABanner() {
               {ctaBanner.description}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={ctaBanner.primaryCta.href} className="btn-bronze">
+              <a
+                href={ctaBanner.primaryCta.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="btn-bronze"
+              >
                 {ctaBanner.primaryCta.label}
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </a>
               <Link href={ctaBanner.secondaryCta.href} className="btn-outline-light">
                 {ctaBanner.secondaryCta.label}
               </Link>

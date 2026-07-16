@@ -73,9 +73,14 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/contact" className="btn-forest hidden !py-2.5 lg:inline-flex">
+            <a
+              href="https://form.jotform.com/261917650330050"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-forest hidden !py-2.5 lg:inline-flex"
+            >
               Submit Your Story
-            </Link>
+            </a>
 
             {/* Mobile toggle */}
             <button
@@ -126,9 +131,14 @@ export function Navbar() {
                 transition={{ delay: 0.35, duration: 0.3 }}
                 className="pt-6"
               >
-                <Link href="/contact" className="btn-forest w-full">
+                <a
+                  href="https://form.jotform.com/261917650330050"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="btn-forest w-full"
+                >
                   Submit Your Story
-                </Link>
+                </a>
               </motion.div>
             </nav>
           </motion.div>
