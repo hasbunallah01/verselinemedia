@@ -16,7 +16,7 @@ export const site = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Live Conversations", href: "/conversations" },
-    { label: "Featured Spotlight", href: "/#featured-spotlight" },
+    { label: "Featured Spotlight", href: "/spotlights" },
     { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],

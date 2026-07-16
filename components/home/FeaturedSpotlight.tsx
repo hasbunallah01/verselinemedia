@@ -108,6 +108,16 @@ export function FeaturedSpotlight() {
             </div>
           </div>
         </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/spotlights"
+            className="inline-flex items-center gap-2 text-sm font-medium text-forest transition-colors hover:text-bronze"
+          >
+            View All Featured Spotlights
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );
