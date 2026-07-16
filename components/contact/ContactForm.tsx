@@ -6,9 +6,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Mail, Loader2, AlertCircle } from "lucide-react";
-import { SectionTitle } from "@/components/ui/SectionTitle";
-import { GlassCard } from "@/components/ui/GlassCard";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
+import { contactFormCopy } from "@/data/contact";
+
+/*
+ * IMPORTANT: form logic is identical to the previous implementation —
+ * same zod schema, same react-hook-form wiring, same POST to
+ * /api/contact (Resend), same success and error handling.
+ * Only the visual shell was restyled to the light design system.
+ */
 
 const schema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -64,38 +71,52 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section bg-white">
       <div className="container-wide">
-        <SectionTitle
-          eyebrow="Contact"
-          title="Get in touch"
-          subtitle="Feel free to reach out to us for any inquiries or assistance."
+        <SectionHeading
+          eyebrow={contactFormCopy.eyebrow}
+          title={contactFormCopy.title}
+          subtitle={contactFormCopy.subtitle}
         />
 
-        <div className="mt-16 grid gap-8 md:grid-cols-5">
-          <div className="md:col-span-2 space-y-6">
-            <GlassCard className="p-6">
+        <div className="mt-14 grid gap-6 md:grid-cols-5">
+          {/* Info */}
+          <div className="space-y-6 md:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5 }}
+              className="card-light p-6"
+            >
               <div className="flex items-start gap-4">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-copper/10 text-copper ring-1 ring-copper/30">
-                  <Mail className="h-4 w-4" />
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-bronze/30 bg-bronze/5 text-bronze">
+                  <Mail className="h-5 w-5" />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-muted">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-charcoal/55">
                     Email
                   </p>
                   <a
                     href={`mailto:${site.email}`}
-                    className="mt-1 block text-white transition hover:text-copper"
+                    className="mt-1 block text-sm font-medium text-charcoal transition hover:text-forest"
                   >
                     {site.email}
                   </a>
                 </div>
               </div>
-            </GlassCard>
+            </motion.div>
           </div>
 
-          <div className="md:col-span-3">
-            <GlassCard className="p-8" id="submit">
+          {/* Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.08 }}
+            className="md:col-span-3"
+          >
+            <div className="card-light p-6 md:p-8" id="submit">
               <AnimatePresence mode="wait">
                 {sent ? (
                   <motion.div
@@ -106,18 +127,18 @@ export function ContactSection() {
                     transition={{ duration: 0.4 }}
                     className="flex flex-col items-center gap-4 py-12 text-center"
                   >
-                    <CheckCircle2 className="h-12 w-12 text-copper" />
-                    <h3 className="font-display text-2xl text-white">
+                    <CheckCircle2 className="h-12 w-12 text-forest" />
+                    <h3 className="font-display text-2xl font-bold">
                       Message sent
                     </h3>
-                    <p className="max-w-sm text-pretty text-muted">
+                    <p className="max-w-sm text-pretty text-sm text-charcoal/70">
                       Thank you for reaching out. We&apos;ll get back to you
                       within 1–2 business days.
                     </p>
                     <button
                       type="button"
                       onClick={() => setSent(false)}
-                      className="btn-ghost mt-2"
+                      className="btn-outline mt-2"
                     >
                       Send another message
                     </button>
@@ -132,30 +153,34 @@ export function ContactSection() {
                     className="space-y-5"
                   >
                     <div className="grid gap-5 sm:grid-cols-2">
-                      <FloatingField
+                      <Field
                         label="First name"
                         name="firstName"
+                        placeholder="Your first name"
                         register={register}
                         error={errors.firstName?.message}
                       />
-                      <FloatingField
+                      <Field
                         label="Last name"
                         name="lastName"
+                        placeholder="Your last name"
                         register={register}
                         error={errors.lastName?.message}
                       />
                     </div>
-                    <FloatingField
+                    <Field
                       label="Email"
                       name="email"
                       type="email"
+                      placeholder="you@example.com"
                       register={register}
                       error={errors.email?.message}
                     />
-                    <FloatingField
+                    <Field
                       label="Message"
                       name="message"
                       textarea
+                      placeholder="Tell us about your story…"
                       register={register}
                       error={errors.message?.message}
                     />
@@ -163,7 +188,7 @@ export function ContactSection() {
                     {errorMessage && (
                       <div
                         role="alert"
-                        className="flex items-start gap-2 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                        className="flex items-start gap-2 rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700"
                       >
                         <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
                         <span>{errorMessage}</span>
@@ -173,7 +198,7 @@ export function ContactSection() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="btn-primary w-full disabled:opacity-60"
+                      className="btn-forest w-full justify-center disabled:opacity-60"
                     >
                       {submitting ? (
                         <>
@@ -187,51 +212,52 @@ export function ContactSection() {
                   </motion.form>
                 )}
               </AnimatePresence>
-            </GlassCard>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
 
-interface FloatingFieldProps {
+interface FieldProps {
   label: string;
   name: keyof FormData;
   type?: string;
   textarea?: boolean;
+  placeholder?: string;
   register: ReturnType<typeof useForm<FormData>>["register"];
   error?: string;
 }
 
-function FloatingField({
+/** Reference-style field: label above, light bordered input. */
+function Field({
   label,
   name,
   type = "text",
   textarea = false,
+  placeholder,
   register,
   error,
-}: FloatingFieldProps) {
+}: FieldProps) {
   const Tag = textarea ? "textarea" : "input";
   return (
-    <div className="relative">
-      <Tag
-        id={name}
-        type={textarea ? undefined : type}
-        placeholder=" "
-        {...register(name)}
-        className="peer w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 pb-3 pt-5 text-white outline-none transition placeholder:text-transparent focus:border-copper/50 focus:bg-white/[0.05]"
-        rows={textarea ? 5 : undefined}
-      />
+    <div>
       <label
         htmlFor={name}
-        className="pointer-events-none absolute left-4 top-1.5 text-[10px] uppercase tracking-[0.2em] text-muted transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-placeholder-shown:tracking-normal peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:tracking-[0.2em] peer-focus:text-copper"
+        className="mb-1.5 block text-sm font-medium text-charcoal"
       >
         {label}
       </label>
-      {error && (
-        <p className="mt-1.5 text-xs text-red-400">{error}</p>
-      )}
+      <Tag
+        id={name}
+        type={textarea ? undefined : type}
+        placeholder={placeholder}
+        {...register(name)}
+        rows={textarea ? 5 : undefined}
+        className="w-full rounded-lg border border-mist bg-white px-4 py-3 text-sm text-charcoal outline-none transition placeholder:text-charcoal/40 focus:border-forest focus:ring-2 focus:ring-forest/15"
+      />
+      {error && <p className="mt-1.5 text-xs text-red-600">{error}</p>}
     </div>
   );
 }
