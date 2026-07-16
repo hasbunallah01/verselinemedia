@@ -15,8 +15,9 @@ export const site = {
   },
   nav: [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
     { label: "Live Conversations", href: "/conversations" },
+    { label: "Featured Spotlight", href: "/#featured-spotlight" },
+    { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   footerLinks: {
