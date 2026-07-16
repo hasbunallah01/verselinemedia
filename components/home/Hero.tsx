@@ -9,7 +9,7 @@ import { hero } from "@/data/home";
 export function Hero() {
   return (
     <section className="bg-ivory px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20">
-      <div className="container-wide grid items-center gap-12 lg:grid-cols-2">
+      <div className="container-wide grid items-center gap-12 md:grid-cols-2">
         {/* Copy */}
         <div>
           <motion.p

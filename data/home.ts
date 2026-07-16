@@ -84,18 +84,56 @@ export const whatWeDo = [
   },
 ] as const;
 
-export const spotlight = {
-  eyebrow: "Featured Spotlight",
-  title: "Live Today with Elena Marlowe",
-  subtitle: "NYT Bestselling Author",
-  bookTitle: "Beneath the Silence",
-  bookCover:
-    "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80",
-  cta: { label: "Watch Live Now", href: "/conversations" },
-  image:
-    "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1200&q=80",
-  imageAlt: "Author speaking during a recorded live interview in a library",
-} as const;
+export interface Spotlight {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  bookTitle: string;
+  bookCover: string;
+  cta: { label: string; href: string };
+  image: string;
+  imageAlt: string;
+}
+
+/** Featured Spotlight carousel — placeholder entries, edit freely. */
+export const spotlights: Spotlight[] = [
+  {
+    eyebrow: "Featured Spotlight",
+    title: "Live Today with Elena Marlowe",
+    subtitle: "NYT Bestselling Author",
+    bookTitle: "Beneath the Silence",
+    bookCover:
+      "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80",
+    cta: { label: "Watch Live Now", href: "/conversations" },
+    image:
+      "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Author speaking during a recorded live interview in a library",
+  },
+  {
+    eyebrow: "Featured Spotlight",
+    title: "This Friday with Amara Osei",
+    subtitle: "Award-Winning Novelist",
+    bookTitle: "The Salt of Distant Seas",
+    bookCover:
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80",
+    cta: { label: "Watch Live Now", href: "/conversations" },
+    image:
+      "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Author reading in a warmly lit studio",
+  },
+  {
+    eyebrow: "Featured Spotlight",
+    title: "In Studio with Daniel Hart",
+    subtitle: "Debut Memoirist",
+    bookTitle: "Letters I Never Sent",
+    bookCover:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80",
+    cta: { label: "Watch Live Now", href: "/conversations" },
+    image:
+      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80",
+    imageAlt: "Studio microphone and headphones on a desk",
+  },
+];
 
 export const howItWorks = [
   {
@@ -176,6 +214,22 @@ export const testimonials = [
     role: "Romance Author",
     avatar:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    quote:
+      "From the first call to the live conversation, everything felt effortless and beautifully produced.",
+    name: "Miguel Alvarez",
+    role: "Historical Fiction Author",
+    avatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+  },
+  {
+    quote:
+      "My readers finally got to hear the story behind the story. The response was overwhelming.",
+    name: "Priya Nair",
+    role: "Literary Fiction Author",
+    avatar:
+      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=200&q=80",
   },
 ] as const;
 

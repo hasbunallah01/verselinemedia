@@ -2,17 +2,16 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MobileCollapsible } from "@/components/ui/MobileCollapsible";
 import { whatWeDo } from "@/data/home";
 import { iconMap } from "@/components/home/IconMap";
 
+/** All cards always visible — responsive grid on desktop, stacked on mobile. */
 export function WhatWeDo() {
   return (
     <section id="what-we-do" className="section bg-white">
       <div className="container-wide">
-        <MobileCollapsible title="What We Do">
-        <SectionHeading title="What We Do" className="hidden lg:flex" />
-        <div className="grid gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-5">
+        <SectionHeading title="What We Do" />
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {whatWeDo.map((item, i) => {
             const Icon = iconMap[item.icon];
             return (
@@ -37,7 +36,6 @@ export function WhatWeDo() {
             );
           })}
         </div>
-        </MobileCollapsible>
       </div>
     </section>
   );

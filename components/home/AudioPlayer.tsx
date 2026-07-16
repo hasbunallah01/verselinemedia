@@ -64,14 +64,14 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
   };
 
   return (
-    <div className="w-full rounded-lg border border-mist bg-stone/70 p-4">
+    <div className="w-full min-w-0 max-w-full rounded-lg border border-mist bg-stone/70 p-3 sm:p-4">
       <audio ref={audioRef} src={src} preload="metadata" />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <button
           type="button"
           onClick={toggle}
           aria-label={playing ? "Pause conversation" : "Play conversation"}
-          className="btn-forest shrink-0 !px-5"
+          className="btn-forest w-full shrink-0 !px-5 sm:w-auto"
         >
           {playing ? (
             <>

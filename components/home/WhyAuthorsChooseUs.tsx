@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MobileCollapsible } from "@/components/ui/MobileCollapsible";
 import { whyAuthorsChooseUs } from "@/data/home";
 import { iconMap } from "@/components/home/IconMap";
 
@@ -10,9 +9,8 @@ export function WhyAuthorsChooseUs() {
   return (
     <section id="why-authors" className="section bg-ivory">
       <div className="container-wide">
-        <MobileCollapsible title="Why Authors Choose Us">
-        <SectionHeading title="Why Authors Choose Us" className="hidden lg:flex" />
-        <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:mt-12 lg:grid-cols-5">
+        <SectionHeading title="Why Authors Choose Us" />
+        <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
           {whyAuthorsChooseUs.map((item, i) => {
             const Icon = iconMap[item.icon];
             return (
@@ -39,7 +37,6 @@ export function WhyAuthorsChooseUs() {
             );
           })}
         </div>
-        </MobileCollapsible>
       </div>
     </section>
   );

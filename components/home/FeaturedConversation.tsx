@@ -31,7 +31,7 @@ export function ConversationCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
-      className="card-light grid gap-8 overflow-hidden p-6 hover:shadow-card-hover md:grid-cols-5 md:p-8"
+      className="card-light grid w-full max-w-full gap-6 overflow-hidden p-4 hover:shadow-card-hover sm:gap-8 sm:p-6 md:grid-cols-5 md:p-8"
     >
       {/* Book cover */}
       <div className="relative aspect-[3/4] overflow-hidden rounded-lg md:col-span-2">
@@ -46,7 +46,7 @@ export function ConversationCard({
       </div>
 
       {/* Details */}
-      <div className="flex flex-col md:col-span-3">
+      <div className="flex min-w-0 flex-col md:col-span-3">
         <div className="flex items-center gap-3">
           <span className="relative h-11 w-11 overflow-hidden rounded-full ring-2 ring-stone">
             <Image
@@ -105,7 +105,7 @@ export function ConversationCard({
 /** Signature homepage section: one featured conversation. */
 export function FeaturedConversation() {
   return (
-    <section id="featured-conversation" className="section bg-stone/50">
+    <section id="featured-conversation" className="section overflow-x-clip bg-stone/50">
       <div className="container-narrow">
         <SectionHeading
           eyebrow="Featured Conversation"

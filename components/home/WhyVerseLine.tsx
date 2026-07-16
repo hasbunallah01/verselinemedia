@@ -4,14 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { whyVerseLine } from "@/data/home";
 import { iconMap } from "@/components/home/IconMap";
-import { MobileCollapsible } from "@/components/ui/MobileCollapsible";
 
+/** Always visible — image left, content right on desktop; image above content on mobile. */
 export function WhyVerseLine() {
   return (
     <section id="why-verseline" className="section bg-ivory">
-      <div className="container-wide">
-      <MobileCollapsible title="Why VerseLine Media">
-      <div className="grid items-center gap-12 lg:grid-cols-5">
+      <div className="container-wide grid items-center gap-12 lg:grid-cols-5">
         {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -24 }}
@@ -37,7 +35,7 @@ export function WhyVerseLine() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="hidden text-center font-display text-3xl font-bold md:text-4xl lg:block lg:text-left"
+            className="text-center font-display text-3xl font-bold md:text-4xl lg:text-left"
           >
             {whyVerseLine.title}
           </motion.h2>
@@ -67,8 +65,6 @@ export function WhyVerseLine() {
             })}
           </div>
         </div>
-      </div>
-      </MobileCollapsible>
       </div>
     </section>
   );
