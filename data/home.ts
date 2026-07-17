@@ -85,53 +85,91 @@ export const whatWeDo = [
 ] as const;
 
 export interface Spotlight {
-  eyebrow: string;
-  title: string;
-  subtitle: string;
+  authorName: string;
+  authorTitle: string;
+  authorPhoto: string;
+  authorEmail: string;
+  banner: string;
+  bannerAlt: string;
   bookTitle: string;
   bookCover: string;
-  cta: { label: string; href: string };
-  image: string;
-  imageAlt: string;
+  tagline: string;
+  genres: string[];
+  description: string;
+  publishedDate: string;
+  language: string;
+  pages: string;
+  learnMoreUrl: string;
+  buyUrl: string;
 }
 
-/** Featured Spotlight carousel — placeholder entries, edit freely. */
+/** Featured Spotlight carousel — one object per featured author. */
 export const spotlights: Spotlight[] = [
   {
-    eyebrow: "Featured Spotlight",
-    title: "Live Today with Elena Marlowe",
-    subtitle: "NYT Bestselling Author",
+    authorName: "Elena Marlowe",
+    authorTitle: "Bestselling Author",
+    authorPhoto:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    authorEmail: "elena.marlowe@example.com",
+    banner:
+      "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1400&q=80",
+    bannerAlt: "Elena Marlowe during a recorded live interview in a library studio",
     bookTitle: "Beneath the Silence",
     bookCover:
       "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80",
-    cta: { label: "Watch Live Now", href: "/conversations" },
-    image:
-      "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Author speaking during a recorded live interview in a library",
+    tagline: "Some truths are buried for a reason.",
+    genres: ["Fiction", "Mystery", "Psychological Thriller"],
+    description:
+      "A gripping tale of secrets, betrayal, and the courage to uncover what lies beneath. When a small town hides a dangerous truth, one woman's search for answers threatens everything.",
+    publishedDate: "May 12, 2024",
+    language: "English",
+    pages: "320 pages",
+    learnMoreUrl: "#",
+    buyUrl: "https://www.amazon.com/",
   },
   {
-    eyebrow: "Featured Spotlight",
-    title: "This Friday with Amara Osei",
-    subtitle: "Award-Winning Novelist",
+    authorName: "Amara Osei",
+    authorTitle: "Award-Winning Novelist",
+    authorPhoto:
+      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=80",
+    authorEmail: "amara.osei@example.com",
+    banner:
+      "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=1400&q=80",
+    bannerAlt: "Amara Osei reading in a warmly lit studio",
     bookTitle: "The Salt of Distant Seas",
     bookCover:
       "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=80",
-    cta: { label: "Watch Live Now", href: "/conversations" },
-    image:
-      "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Author reading in a warmly lit studio",
+    tagline: "Every tide carries a story home.",
+    genres: ["Literary Fiction", "Family Saga"],
+    description:
+      "Spanning three generations and two continents, a luminous novel about the women of one fishing family and the ocean that both separates and binds them.",
+    publishedDate: "February 3, 2025",
+    language: "English",
+    pages: "412 pages",
+    learnMoreUrl: "#",
+    buyUrl: "https://www.amazon.com/",
   },
   {
-    eyebrow: "Featured Spotlight",
-    title: "In Studio with Daniel Hart",
-    subtitle: "Debut Memoirist",
+    authorName: "Daniel Hart",
+    authorTitle: "Debut Memoirist",
+    authorPhoto:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    authorEmail: "daniel.hart@example.com",
+    banner:
+      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1400&q=80",
+    bannerAlt: "Studio microphone and headphones ready for Daniel Hart's conversation",
     bookTitle: "Letters I Never Sent",
     bookCover:
       "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80",
-    cta: { label: "Watch Live Now", href: "/conversations" },
-    image:
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Studio microphone and headphones on a desk",
+    tagline: "The stories we carry home never leave us.",
+    genres: ["Memoir", "Nonfiction"],
+    description:
+      "Twenty years of unsent letters become a map of a life lived between headlines — a memoir about the people a war correspondent never stopped writing to.",
+    publishedDate: "September 21, 2025",
+    language: "English",
+    pages: "288 pages",
+    learnMoreUrl: "#",
+    buyUrl: "https://www.amazon.com/",
   },
 ];
 
