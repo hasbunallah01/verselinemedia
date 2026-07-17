@@ -52,7 +52,7 @@ export function ConversationArchive() {
         {conversations.map((conversation, i) => (
           <div key={conversation.id} className="relative">
             <span className="eyebrow mb-3 block text-center sm:text-left">
-              Conversation #{conversations.length - i}
+              Conversation #{i + 1}
             </span>
             <ConversationCard conversation={conversation} />
           </div>

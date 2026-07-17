@@ -58,4 +58,28 @@ export const featuredConversation: Conversation = kateWashington;
  * above and add it to the front of this array. The archive page
  * renders one card per entry with no layout changes needed.
  */
-export const conversations: Conversation[] = [kateWashington];
+/** Conversation #2 — Andrew Child. */
+export const andrewChild: Conversation = {
+  id: "andrew-child-the-sentinel",
+  authorName: "Andrew Child",
+  authorPhoto: "/images/andrew-child.webp",
+  authorSlug: "andrew-child",
+  authorBio:
+    "Andrew Child is a bestselling thriller writer and co-author of the Jack Reacher series alongside Lee Child.",
+  authorRole: "Interview Guest",
+  bookTitle: "The Sentinel: A Jack Reacher Novel",
+  bookCover: "/images/the-sentinel-cover.webp",
+  conversationTitle: "A Conversation Worth Hearing",
+  conversationDescription:
+    "Andrew Child discusses The Sentinel, co-written with Lee Child, sharing insights into continuing the iconic Jack Reacher series, the writing process, and bringing one of thriller fiction's most enduring characters to a new generation.",
+  audioUrl: "/audio/andrew-child-the-sentinel.mp3",
+  duration: "10 min",
+  publishDate: "2026-07-17",
+  tags: ["Live Interview", "Lee Child & Andrew Child"],
+};
+
+/**
+ * Archive order = display order on /conversations
+ * (Conversation #1 first, new entries appended below).
+ */
+export const conversations: Conversation[] = [kateWashington, andrewChild];
