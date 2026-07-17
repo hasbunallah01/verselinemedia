@@ -17,11 +17,13 @@ function formatTime(seconds: number) {
 }
 
 /**
- * Custom on-page audio player: play / pause, seekable
- * progress bar, current time and total duration.
+ * Custom on-page audio player: play / pause, current time, total
+ * duration, animated progress bar with a draggable thumb, smooth
+ * seeking, and a clean reset when playback ends.
  */
 export function AudioPlayer({ src, title }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const scrubbing = useRef(false);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -30,16 +32,25 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const onTime = () => setCurrent(audio.currentTime);
+    const onTime = () => {
+      if (!scrubbing.current) setCurrent(audio.currentTime);
+    };
     const onMeta = () => setDuration(audio.duration);
-    const onEnd = () => setPlaying(false);
+    const onEnd = () => {
+      // Proper reset when playback ends
+      setPlaying(false);
+      audio.currentTime = 0;
+      setCurrent(0);
+    };
 
     audio.addEventListener("timeupdate", onTime);
     audio.addEventListener("loadedmetadata", onMeta);
+    audio.addEventListener("durationchange", onMeta);
     audio.addEventListener("ended", onEnd);
     return () => {
       audio.removeEventListener("timeupdate", onTime);
       audio.removeEventListener("loadedmetadata", onMeta);
+      audio.removeEventListener("durationchange", onMeta);
       audio.removeEventListener("ended", onEnd);
     };
   }, []);
@@ -56,12 +67,15 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
     }
   };
 
+  /** Smooth seeking — audio follows the thumb while dragging. */
   const seek = (value: number) => {
     const audio = audioRef.current;
     if (!audio || !Number.isFinite(duration) || duration === 0) return;
     audio.currentTime = value;
     setCurrent(value);
   };
+
+  const pct = duration > 0 ? (current / duration) * 100 : 0;
 
   return (
     <div className="w-full min-w-0 max-w-full rounded-lg border border-mist bg-stone/70 p-3 sm:p-4">
@@ -88,7 +102,7 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
 
         <div className="min-w-0 flex-1">
           {title && (
-            <p className="mb-1.5 truncate text-xs font-medium text-charcoal/70">
+            <p className="mb-1.5 truncate text-xs font-medium text-charcoal/60">
               {title}
             </p>
           )}
@@ -98,11 +112,21 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
             max={duration || 0}
             step={0.1}
             value={current}
+            aria-label="Seek within the conversation"
+            aria-valuetext={`${formatTime(current)} of ${formatTime(duration)}`}
+            onPointerDown={() => {
+              scrubbing.current = true;
+            }}
+            onPointerUp={() => {
+              scrubbing.current = false;
+            }}
             onChange={(e) => seek(Number(e.target.value))}
-            aria-label="Seek"
-            className="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-mist accent-forest"
+            className="audio-range w-full"
+            style={{
+              background: `linear-gradient(to right, #23463F ${pct}%, #E7E4DD ${pct}%)`,
+            }}
           />
-          <div className="mt-1 flex justify-between text-[11px] tabular-nums text-charcoal/60">
+          <div className="mt-1 flex justify-between text-xs tabular-nums text-charcoal/60">
             <span>{formatTime(current)}</span>
             <span>{formatTime(duration)}</span>
           </div>

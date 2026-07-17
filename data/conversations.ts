@@ -26,31 +26,36 @@ export interface Conversation {
   tags?: string[];
 }
 
-/**
- * PLACEHOLDER — replace with real content when the first
- * conversation is produced. Audio, images and copy are all
- * swappable from this single object.
- */
-export const featuredConversation: Conversation = {
-  id: "placeholder-featured",
-  authorName: "Author Name",
-  authorPhoto:
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-  authorSlug: "author-name",
+/** Conversation #1 — Kate Washington. */
+export const kateWashington: Conversation = {
+  id: "kate-washington-already-toast",
+  authorName: "Kate Washington",
+  authorPhoto: "/images/kate-washington-monogram.png",
+  authorSlug: "kate-washington",
   authorBio:
-    "A short author biography goes here. Replace this placeholder with the featured author's real bio.",
+    "Kate Washington is a writer and critic whose work explores caregiving, family, and the labor we don't see.",
   authorRole: "Featured Author",
-  bookTitle: "Book Title",
-  bookCover:
-    "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80",
+  bookTitle: "Already Toast: Caregiving and Burnout in America",
+  bookCover: "/images/already-toast-cover.webp",
   conversationTitle: "A Conversation Worth Hearing",
   conversationDescription:
-    "A short description of the conversation goes here — what the author shares, the story behind the book, and why it matters to readers. Replace this placeholder text when the first real conversation is published.",
-  audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-  duration: "42 min",
-  publishDate: "2026-07-01",
+    "Kate Washington shares the personal story behind Already Toast, discussing caregiving, resilience, and the unseen challenges faced by millions of family caregivers.",
+  audioUrl: "/audio/kate-washington-already-toast.mp3",
+  duration: "10 min",
+  publishDate: "2026-07-17",
   tags: ["Live Interview", "Author Spotlight"],
 };
 
-/** Future conversation library — populated later. */
-export const conversations: Conversation[] = [featuredConversation];
+/**
+ * Homepage featured conversation — always exactly ONE.
+ * Point this at whichever archive entry is currently featured.
+ */
+export const featuredConversation: Conversation = kateWashington;
+
+/**
+ * Conversation archive (/conversations) — newest first.
+ * To add a new conversation: create another Conversation object
+ * above and add it to the front of this array. The archive page
+ * renders one card per entry with no layout changes needed.
+ */
+export const conversations: Conversation[] = [kateWashington];
