@@ -26,7 +26,27 @@ export interface Conversation {
   tags?: string[];
 }
 
-/** Conversation #1 — Kate Washington. */
+/** Conversation #1 — Terri E. Givens. */
+export const terriGivens: Conversation = {
+  id: "terri-givens-radical-empathy",
+  authorName: "Terri E. Givens",
+  authorPhoto: "/images/terri-givens.webp",
+  authorSlug: "terri-givens",
+  authorBio:
+    "Terri E. Givens is a political scientist and author writing on empathy, justice, and bridging social divides.",
+  authorRole: "Featured Author",
+  bookTitle: "Radical Empathy: Finding a Path to Bridging Racial Divides",
+  bookCover: "/images/radical-empathy-cover.webp",
+  conversationTitle: "A Conversation on Empathy, Justice & Building Bridges",
+  conversationDescription:
+    "Join Terri E. Givens as she discusses the inspiration behind Radical Empathy, exploring how understanding others, confronting bias, and embracing empathy can help bridge social and racial divides.",
+  audioUrl: "/audio/terri-givens-radical-empathy.mp3",
+  duration: "10 min",
+  publishDate: "2026-07-18",
+  tags: ["Live Interview", "Author Spotlight"],
+};
+
+/** Kate Washington. */
 export const kateWashington: Conversation = {
   id: "kate-washington-already-toast",
   authorName: "Kate Washington",
@@ -82,4 +102,4 @@ export const andrewChild: Conversation = {
  * Archive order = display order on /conversations
  * (Conversation #1 first, new entries appended below).
  */
-export const conversations: Conversation[] = [kateWashington, andrewChild];
+export const conversations: Conversation[] = [terriGivens, kateWashington, andrewChild];
