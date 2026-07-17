@@ -102,4 +102,30 @@ export const andrewChild: Conversation = {
  * Archive order = display order on /conversations
  * (Conversation #1 first, new entries appended below).
  */
-export const conversations: Conversation[] = [terriGivens, kateWashington, andrewChild];
+/** Conversation #4 — Abigail Dillen (featured contributor, not the book's author). */
+export const abigailDillen: Conversation = {
+  id: "abigail-dillen-all-we-can-save",
+  authorName: "Abigail Dillen",
+  authorPhoto: "/images/abigail-dillen-monogram.png",
+  authorSlug: "abigail-dillen",
+  authorBio:
+    "Abigail Dillen is the President of Earthjustice and an environmental lawyer. She is a featured contributor to the climate anthology All We Can Save, edited by Katharine K. Wilkinson & Ayana Elizabeth Johnson.",
+  authorRole: "Featured Contributor",
+  bookTitle: "All We Can Save: Truth, Courage, and Solutions for the Climate Crisis",
+  bookCover: "/images/all-we-can-save-cover.webp",
+  conversationTitle:
+    "Featured in All We Can Save: Truth, Courage, and Solutions for the Climate Crisis",
+  conversationDescription:
+    "Join environmental lawyer and Earthjustice President Abigail Dillen as she discusses her powerful contribution, \"Litigating in a Time of Crisis,\" from the bestselling climate anthology All We Can Save. Discover how personal loss, environmental justice, and legal advocacy come together in an inspiring conversation about hope, courage, and protecting our planet.",
+  audioUrl: "/audio/abigail-dillen-all-we-can-save.mp3",
+  duration: "10 min",
+  publishDate: "2026-07-18",
+  tags: ["Featured Contributor", "Eds. Wilkinson & Johnson"],
+};
+
+export const conversations: Conversation[] = [
+  terriGivens,
+  kateWashington,
+  andrewChild,
+  abigailDillen,
+];
