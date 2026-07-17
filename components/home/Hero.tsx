@@ -46,12 +46,17 @@ export function Hero() {
               {hero.primaryCta.label}
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href={hero.secondaryCta.href} className="btn-outline">
+            <a
+              href={hero.secondaryCta.href}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn-outline"
+            >
               <span className="grid h-6 w-6 place-items-center rounded-full border border-charcoal/25">
                 <Play className="h-3 w-3 fill-current" />
               </span>
               {hero.secondaryCta.label}
-            </Link>
+            </a>
           </motion.div>
         </div>
 

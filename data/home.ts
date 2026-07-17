@@ -9,7 +9,7 @@ export const hero = {
   description:
     "VerseLine Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
-  secondaryCta: { label: "Watch Live Interview", href: "/conversations" },
+  secondaryCta: { label: "View Us Live", href: "https://youtube.com/@verselinemedia" },
   image:
     "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80",
   imageAlt: "Studio microphone beside stacked books in warm light",
