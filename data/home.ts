@@ -148,6 +148,36 @@ export const spotlights: Spotlight[] = [
     ],
   },
   {
+    authorName: "Reza Aslan",
+    authorTitle: "#1 Bestselling Author, Scholar of Religions & Public Intellectual",
+    authorPhoto: "/images/reza-aslan-avatar.jpg",
+    contactUrl: "https://rezaaslan.com",
+    banner: "/images/reza-aslan-banner.jpg",
+    bannerAlt:
+      "Featured author panel for Reza Aslan and No god but God: The Origins, Evolution, and Future of Islam",
+    bookTitle: "No god but God: The Origins, Evolution, and Future of Islam",
+    bookCover: "/images/reza-aslan-cover.jpg",
+    tagline: "A landmark exploration of Islam's rich history and enduring impact.",
+    genres: ["Religion", "History", "Islamic Studies", "Nonfiction"],
+    description:
+      "A modern classic on the history of Islam, now in its acclaimed twentieth-anniversary edition. Reza Aslan traces the faith from its origins in Mecca and Medina to its global present, challenging misconceptions with a nuanced, deeply human portrait rooted in justice, equality, and compassion. Essential reading for a better understanding of one of the world's great religions.",
+    publishedDate: "August 30, 2011",
+    language: "English",
+    pages: "464 pages",
+    learnMoreUrl:
+      "https://www.amazon.com/Reza-Aslan/e/B001JONKIK/ref=dp_byline_cont_book_1",
+    buyUrl: "https://www.amazon.com/dp/0812982444",
+    fullDescription: [
+      "No god but God is the acclaimed twentieth-anniversary edition of Reza Aslan's groundbreaking introduction to Islam. Combining historical scholarship with accessible storytelling, the book explores the origins of Islam, the life and teachings of the Prophet Muhammad, and the development of one of the world's major religions.",
+      "Tracing Islam from its beginnings in Mecca and Medina through centuries of political, cultural, and theological evolution, Aslan examines how the faith's message of justice, equality, and compassion has been interpreted across different eras and societies.",
+      "This revised edition also addresses modern issues including the politicization of religion, the rise of extremist ideologies, Islamophobia, and the ongoing relationship between tradition and modernity. Thoroughly researched yet approachable for general readers, the book offers an insightful and balanced understanding of Islam's past, present, and future.",
+    ],
+    aboutAuthor: [
+      "Reza Aslan is an internationally acclaimed writer, scholar of religions, television host, and public intellectual. He is the #1 New York Times bestselling author of Zealot: The Life and Times of Jesus of Nazareth, as well as No god but God, God: A Human History, and An American Martyr in Persia.",
+      "Born in Tehran and raised in the United States, Aslan hosted the CNN documentary series Believer and served as an executive producer on HBO's The Leftovers. A professor of creative writing whose work bridges history, spirituality, and contemporary issues, he inspires readers to see beyond stereotypes and engage with the world with empathy and understanding.",
+    ],
+  },
+  {
     authorName: "Amara Osei",
     authorTitle: "Award-Winning Novelist",
     authorPhoto:
@@ -166,28 +196,6 @@ export const spotlights: Spotlight[] = [
     publishedDate: "February 3, 2025",
     language: "English",
     pages: "412 pages",
-    learnMoreUrl: "#",
-    buyUrl: "https://www.amazon.com/",
-  },
-  {
-    authorName: "Daniel Hart",
-    authorTitle: "Debut Memoirist",
-    authorPhoto:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
-    contactUrl: "mailto:daniel.hart@example.com",
-    banner:
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1400&q=80",
-    bannerAlt: "Studio microphone and headphones ready for Daniel Hart's conversation",
-    bookTitle: "Letters I Never Sent",
-    bookCover:
-      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80",
-    tagline: "The stories we carry home never leave us.",
-    genres: ["Memoir", "Nonfiction"],
-    description:
-      "Twenty years of unsent letters become a map of a life lived between headlines — a memoir about the people a war correspondent never stopped writing to.",
-    publishedDate: "September 21, 2025",
-    language: "English",
-    pages: "288 pages",
     learnMoreUrl: "#",
     buyUrl: "https://www.amazon.com/",
   },
