@@ -88,51 +88,71 @@ export interface Spotlight {
   authorName: string;
   authorTitle: string;
   authorPhoto: string;
-  authorEmail: string;
+  /** Contact Author button target — social profile, email (mailto:), etc. */
+  contactUrl: string;
   banner: string;
   bannerAlt: string;
   bookTitle: string;
   bookCover: string;
   tagline: string;
   genres: string[];
+  /** Short 2–3 sentence homepage summary. */
   description: string;
   publishedDate: string;
   language: string;
   pages: string;
+  /** "#" renders the button disabled until the page exists. */
   learnMoreUrl: string;
   buyUrl: string;
+  /** Full profile (/spotlights) — entries without these show homepage-only. */
+  fullDescription?: string[];
+  bookQuote?: string[];
+  aboutAuthor?: string[];
 }
 
-/** Featured Spotlight carousel — one object per featured author. */
+/** Featured Spotlight carousel + full profiles. One object per author. */
 export const spotlights: Spotlight[] = [
   {
-    authorName: "Elena Marlowe",
-    authorTitle: "Bestselling Author",
-    authorPhoto:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-    authorEmail: "elena.marlowe@example.com",
-    banner:
-      "https://images.unsplash.com/photo-1521056787327-165dc2a32836?auto=format&fit=crop&w=1400&q=80",
-    bannerAlt: "Elena Marlowe during a recorded live interview in a library studio",
-    bookTitle: "Beneath the Silence",
-    bookCover:
-      "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=500&q=80",
-    tagline: "Some truths are buried for a reason.",
-    genres: ["Fiction", "Mystery", "Psychological Thriller"],
+    authorName: "Rose Rossner",
+    authorTitle: "USA Today Bestselling Children's Author",
+    authorPhoto: "/images/rose-rossner-avatar.jpg",
+    contactUrl: "https://x.com/rose_rossner",
+    banner: "/images/rose-rossner-banner.jpg",
+    bannerAlt:
+      "Thanks a Latte for Being My Teacher — book displayed with teacher-appreciation gifts on a chalkboard background",
+    bookTitle: "Thanks a Latte for Being My Teacher!",
+    bookCover: "/images/rose-rossner-cover.jpg",
+    tagline: "Because the best teachers deserve a latte love!",
+    genres: ["Children's Book", "Picture Book"],
     description:
-      "A gripping tale of secrets, betrayal, and the courage to uncover what lies beneath. When a small town hides a dangerous truth, one woman's search for answers threatens everything.",
-    publishedDate: "May 12, 2024",
+      "A punderfully heartwarming picture book of appreciation from the USA Today bestselling series that brought you I Love You Like No Otter! Filled with playful rhymes and adorable illustrations, it's the perfect way to thank the teachers, mentors, and coaches who make learning awesome — for Teacher Appreciation Week, the last day of school, or any day worth a thank-you.",
+    publishedDate: "March 4, 2025",
     language: "English",
-    pages: "320 pages",
-    learnMoreUrl: "#",
-    buyUrl: "https://www.amazon.com/",
+    pages: "40 pages",
+    learnMoreUrl: "https://www.amazon.com/Rose-Rossner/e/B091CBJJGY/ref=aufs_dp_fta_an_dsk",
+    buyUrl: "https://a.co/d/0hxIvted",
+    fullDescription: [
+      "Espresso your thanks for a tea-riffic teacher with this punderfully heartwarming picture book of appreciation from the USA Today bestselling series that brought you I Love You Like No Otter!",
+      "Celebrate a special teacher, mentor, or coach who helped you suc-seed this year and makes learning awesome to the core with this charming picture book of gratitude and love. Filled with punny rhymes of thanks and adorable illustrations of essential educator staples, this erase-istible story is the perfect gift to share on the last day of school with the one who teaches you a latte at daycare, preschool, kindergarten, grade school, and beyond and bakes each day filled with fun!",
+      "The book celebrates teachers, mentors, and educators through playful rhymes, colorful illustrations, and heartfelt appreciation. It makes an ideal gift for Teacher Appreciation Week, the end of the school year, graduation, moving-up day, or any occasion to thank an inspiring educator.",
+    ],
+    bookQuote: [
+      "Teacher, thank you a hole lot",
+      "For everything you do.",
+      "You're special and tea-riffic",
+      "In all you say and brew!",
+    ],
+    aboutAuthor: [
+      "Rose Rossner is a USA Today bestselling children's book author known for playful, pun-filled board books and picture books celebrating love, gratitude, and life's sweetest moments.",
+      "Since her debut, I Love You Like No Otter (2020), she has published more than one hundred titles, including I Love You More, Babysaur, The ABCs of Love, and Thanks a Latte for Being My Teacher! She lives with her son and her husky named Dino.",
+    ],
   },
   {
     authorName: "Amara Osei",
     authorTitle: "Award-Winning Novelist",
     authorPhoto:
       "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=80",
-    authorEmail: "amara.osei@example.com",
+    contactUrl: "mailto:amara.osei@example.com",
     banner:
       "https://images.unsplash.com/photo-1519791883288-dc8bd696e667?auto=format&fit=crop&w=1400&q=80",
     bannerAlt: "Amara Osei reading in a warmly lit studio",
@@ -154,7 +174,7 @@ export const spotlights: Spotlight[] = [
     authorTitle: "Debut Memoirist",
     authorPhoto:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
-    authorEmail: "daniel.hart@example.com",
+    contactUrl: "mailto:daniel.hart@example.com",
     banner:
       "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1400&q=80",
     bannerAlt: "Studio microphone and headphones ready for Daniel Hart's conversation",

@@ -127,22 +127,37 @@ function SpotlightCard({ item }: { item: Spotlight }) {
       {/* Actions */}
       <div className="mt-8 grid gap-3 sm:grid-cols-3">
         <a
-          href={`mailto:${item.authorEmail}`}
+          href={item.contactUrl}
+          {...(item.contactUrl.startsWith("http")
+            ? { target: "_blank", rel: "noreferrer noopener" }
+            : {})}
           className="btn-forest justify-center"
         >
           <Mail className="h-4 w-4" />
           Contact Author
         </a>
-        <a
-          href={item.learnMoreUrl}
-          aria-disabled="true"
-          title="Full spotlight page coming soon"
-          onClick={(e) => e.preventDefault()}
-          className="btn-outline justify-center"
-        >
-          <UserRound className="h-4 w-4" />
-          Learn More
-        </a>
+        {item.learnMoreUrl === "#" ? (
+          <a
+            href="#"
+            aria-disabled="true"
+            title="Full spotlight page coming soon"
+            onClick={(e) => e.preventDefault()}
+            className="btn-outline justify-center"
+          >
+            <UserRound className="h-4 w-4" />
+            Learn More
+          </a>
+        ) : (
+          <a
+            href={item.learnMoreUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="btn-outline justify-center"
+          >
+            <UserRound className="h-4 w-4" />
+            Learn More
+          </a>
+        )}
         <a
           href={item.buyUrl}
           target="_blank"
