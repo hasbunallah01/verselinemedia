@@ -19,6 +19,7 @@ import {
   Target,
   TrendingUp,
   UserPlus,
+  UserRound,
   Users,
   type LucideIcon,
 } from "lucide-react";
@@ -45,5 +46,6 @@ export const iconMap: Record<string, LucideIcon> = {
   target: Target,
   "trending-up": TrendingUp,
   "user-plus": UserPlus,
+  "user-round": UserRound,
   users: Users,
 };
