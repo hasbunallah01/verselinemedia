@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "Featured Spotlights",
   description:
-    "Complete profiles of every featured author on VerseLine Media — the books, the stories, and the authors who wrote them.",
+    "Discover featured authors on VerseLine Media — including bestselling psychological thriller author Alison James and The Good Neighbour — with full profiles, stories, and links to explore each book.",
 };
 
 export default function SpotlightsPage() {

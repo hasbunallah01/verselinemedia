@@ -178,6 +178,37 @@ export const spotlights: Spotlight[] = [
     ],
   },
   {
+    authorName: "Alison James",
+    authorTitle: "Bestselling Psychological Thriller Author",
+    authorPhoto: "/images/alison-james-avatar.jpg",
+    contactUrl: "mailto:alison.jsmes.pen@gmail.com",
+    banner: "/images/alison-james-banner.jpg",
+    bannerAlt:
+      "Featured live interview panel for Alison James and her psychological thriller The Good Neighbour",
+    bookTitle:
+      "The Good Neighbour: A Totally Gripping and Addictive Psychological Thriller with a Heart-Pounding Twist",
+    bookCover: "/images/alison-james-cover.jpg",
+    tagline: "Will her new home turn into a nightmare?",
+    genres: ["Psychological Thriller"],
+    description:
+      "Moving into a quiet apartment was supposed to be a fresh start — but every neighbour has secrets, and trust becomes increasingly dangerous. A fast-paced psychological thriller packed with suspense, unexpected twists, and emotional tension that keeps readers guessing until the final page.",
+    publishedDate: "August 30, 2011",
+    language: "English",
+    pages: "321 pages",
+    learnMoreUrl:
+      "https://www.amazon.com/Alison-James/e/B0787VZPXT/ref=aufs_dp_fta_an_dsk",
+    buyUrl: "https://a.co/d/0drOOcqw",
+    fullDescription: [
+      "Moving into a quiet apartment was supposed to be a fresh start. But every neighbour has secrets, every encounter raises new questions, and trust becomes increasingly dangerous.",
+      "As hidden truths begin to surface, the line between victim and suspect blurs, leading to a shocking finale.",
+      "This fast-paced psychological thriller is packed with suspense, unexpected twists, and emotional tension that keeps readers guessing until the final page.",
+    ],
+    aboutAuthor: [
+      "Alison James is a bestselling psychological thriller author known for crafting suspenseful novels filled with gripping twists, unreliable characters, and emotional tension.",
+      "Her stories explore guilt, deception, hidden identities, and the dark secrets people keep behind seemingly ordinary lives. She has built a loyal readership among fans of psychological suspense through her page-turning storytelling and unpredictable endings.",
+    ],
+  },
+  {
     authorName: "Amara Osei",
     authorTitle: "Award-Winning Novelist",
     authorPhoto:
