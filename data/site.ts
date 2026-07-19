@@ -38,7 +38,7 @@ export const site = {
       { label: "Contact Us", href: "/contact" },
       { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
       { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms & Conditions", href: "/" },
+      { label: "Terms & Conditions", href: "/terms" },
     ],
   },
 } as const;
