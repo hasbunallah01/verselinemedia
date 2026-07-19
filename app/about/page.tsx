@@ -10,7 +10,6 @@ import {
   AuthorChecklist,
   EditorialStandards,
   SpotlightGallery,
-  CommunityStats,
   AboutCTA,
 } from "@/components/about/AboutSections";
 import { FAQPreview } from "@/components/home/FAQPreview";
@@ -74,9 +73,6 @@ export default function AboutPage() {
 
       {/* 15. Why Authors Choose VerseLine Media */}
       <ValueGrid {...whyChooseUs} columns={3} background="ivory" />
-
-      {/* 16. Community */}
-      <CommunityStats />
 
       {/* 17. Closing CTA */}
       <AboutCTA />
