@@ -146,7 +146,7 @@ export const spotlights: Spotlight[] = [
     aboutAuthor: [
       "Jarrah White is an Australian author, filmmaker, astrophysicist, and geologist whose passion for storytelling began during childhood, creating handmade picture books before he could even write.",
       "Inspired by authors such as Ian Fleming and Michael Crichton, along with real historical events and classic adventure stories, Jarrah spent nearly twenty-four years developing the world of Sid Tanner before publishing his debut novel.",
-      "He holds qualifications in Screen & Media from the Sydney Institute of TAFE NSW and earned a Bachelor of Science with majors in Geology and Astronomy & Astrophysics from Macquarie University. Beyond writing, he has appeared in Australian television productions including Fat Pizza and Darradong Local Council.",
+      "He holds qualifications in Screen & Media from the Sydney Institute of TAFE NSW and earned a Bachelor of Science with a major in Geology and a minor in Astronomy & Astrophysics from Macquarie University. Beyond writing, he has appeared in Australian television productions including Fat Pizza and Darradong Local Council.",
       "Trojan SMERSH is the first installment in an ongoing Sid Tanner thriller series and fulfills a promise he made to his late step-grandfather, whose encouragement inspired the project from the very beginning.",
     ],
   },
