@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Facebook, Youtube } from "lucide-react";
+import { Twitter, Facebook } from "lucide-react";
 import { site } from "@/data/site";
 import { Logo } from "@/components/ui/Logo";
 import { NewsletterForm } from "@/components/home/Newsletter";
@@ -7,7 +7,6 @@ import { NewsletterForm } from "@/components/home/Newsletter";
 const socialIcons = {
   twitter: Twitter,
   facebook: Facebook,
-  youtube: Youtube,
 } as const;
 
 const columns = [
