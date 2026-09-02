@@ -268,6 +268,40 @@ export const spotlights: Spotlight[] = [
     learnMoreUrl: "#",
     buyUrl: "https://www.amazon.com/",
   },
+  {
+    authorName: "Janice Kenyatta",
+    authorTitle: "Author \u2022 Educator \u2022 Storyteller",
+    authorPhoto: "/images/janice-kenyatta-avatar.jpg",
+    contactUrl: "https://janicekenyatta.com",
+    banner: "/images/janice-kenyatta-banner.jpg",
+    bannerAlt:
+      "Featured author panel for Janice Kenyatta and her children's picture book Just As It Is!",
+    bookTitle: "Just As It Is!",
+    bookCover: "/images/janice-kenyatta-cover.jpg",
+    tagline:
+      "A story of self-love, acceptance, and the beauty of embracing who you are.",
+    genres: ["Children's Book", "Children's Picture Book"],
+    description:
+      "Just As It Is! is a heartwarming children's picture book about a young African American girl whose parents teach her to love and appreciate her natural features, including her hair, while also learning to appreciate differences in people from different ethnic and cultural backgrounds. The central themes are self-love, self-acceptance, confidence, diversity, and appreciating others.",
+    publishedDate: "February 6, 2025",
+    language: "English",
+    pages: "42 pages",
+    learnMoreUrl: "https://www.amazon.com/stores/author/B0BJC9Z9P1",
+    buyUrl:
+      "https://www.amazon.com/Just-As-Janice-Kenyatta/dp/B0DWQRMLV5",
+    fullDescription: [
+      "Just As It Is! is a heartwarming children's picture book about a young African American girl whose parents teach her to love and appreciate her natural features, including her hair, just as it is.",
+      "The story gently introduces young readers to the importance of self-love, self-acceptance, and confidence, while also celebrating the differences in people from different ethnic and cultural backgrounds. Through warm, joyful storytelling and engaging illustrations, the book helps parents and educators start meaningful conversations about identity, kindness, and respect.",
+      "Written for ages 3 to 10, Just As It Is! is an ideal read-aloud for home, classroom, and library. It also pairs with the Abena Doll, inspired by the book's main character, offering young readers a tangible reminder that their worth is inherent and unwavering.",
+      "The central themes of the book — self-love, self-acceptance, confidence, diversity, and appreciating others — make it a valuable addition to any child's library and a meaningful gift for the young readers in your life.",
+    ],
+    aboutAuthor: [
+      "Janice Kenyatta is a retired educator and school administrator with more than 40 years of experience in education, including service as a Supervisor of Career and Technical Education.",
+      "She holds B.A. and M.A. degrees in Business Education and has spent her career championing young people, mentorship, and equitable learning. Born and raised in Newark, New Jersey, Janice brings a lifetime of community-rooted storytelling to her work as an author.",
+      "Janice is also the co-author of Black Folk's Hair, Revisited: Secrets, Shame, and Liberation, a book that explores the sociological and historical reasons many Black women began straightening their hair. She wrote Just As It Is! as a natural extension of that work — building a foundation of self-love and self-acceptance from an early age.",
+      "She is also associated with the Abena Doll, inspired by the main character in Just As It Is!, which serves as a tangible reminder to young girls and women of color that their worth is inherent and unwavering. Just As It Is! is her children's debut.",
+    ],
+  },
 ];
 
 export const howItWorks = [
