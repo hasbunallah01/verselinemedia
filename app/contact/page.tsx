@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Twitter, Facebook } from "lucide-react";
+import { Facebook } from "lucide-react";
 import { ContactSection } from "@/components/contact/ContactForm";
 import { ContactHeader, ContactCards } from "@/components/contact/ContactSections";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 };
 
 const socialLinks = [
-  { icon: Twitter, label: "Twitter / X", href: site.socials.twitter },
   { icon: Facebook, label: "Facebook", href: site.socials.facebook },
 ];
 
@@ -30,7 +29,7 @@ export default function ContactPage() {
             title="Elsewhere online"
             subtitle="Follow the conversation on the platforms where readers actually live."
           />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <div className="mt-12 grid gap-4 sm:grid-cols-1">
             {socialLinks.map((s) => (
               <a
                 key={s.label}

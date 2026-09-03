@@ -9,7 +9,6 @@ export const site = {
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
-    twitter: "https://twitter.com/verselinemedia",
     facebook: "https://www.facebook.com/share/1GYLp3c4Zs/",
     youtube: "https://youtube.com/@verselinemedia",
   },
