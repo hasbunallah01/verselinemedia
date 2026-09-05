@@ -7,9 +7,9 @@ export const hero = {
   eyebrow: "Live Conversations. Real Stories. Lasting Impact.",
   title: "Where Authors Are Heard and Readers Connect",
   description:
-    "VerseLine Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
+    "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
-  secondaryCta: { label: "View Us Live", href: "https://youtube.com/@verselinemedia" },
+  secondaryCta: { label: "View Us Live", href: "https://youtube.com/@thebookcrew" },
   image:
     "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80",
   imageAlt: "Studio microphone beside stacked books in warm light",
@@ -29,8 +29,8 @@ export const communityAvatars = [
   "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80",
 ] as const;
 
-export const whyVerseLine = {
-  title: "Why VerseLine Media",
+export const whyBookCrew = {
+  title: "Why The Book Crew",
   image:
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80",
   imageAlt: "Books arranged on a sunlit desk beside a plant",
@@ -362,7 +362,7 @@ export const whyAuthorsChooseUs = [
 export const testimonials = [
   {
     quote:
-      "VerseLine Media helped me reach thousands of new readers. The interview was such a beautiful experience!",
+      "The Book Crew Readers Community helped me reach thousands of new readers. The interview was such a beautiful experience!",
     name: "Claire Bennett",
     role: "Bestselling Author",
     avatar:
@@ -410,7 +410,7 @@ export const faqImage = {
 export const ctaBanner = {
   title: "Share Your Story. Inspire the World.",
   description:
-    "Join VerseLine Media and connect with readers through the power of live conversation.",
+    "Join The Book Crew Readers Community and connect with readers through the power of live conversation.",
   primaryCta: { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Learn More", href: "/about" },
   image:

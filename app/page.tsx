@@ -1,6 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { FeaturedConversation } from "@/components/home/FeaturedConversation";
-import { WhyVerseLine } from "@/components/home/WhyVerseLine";
+import { WhyBookCrew } from "@/components/home/WhyBookCrew";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { FeaturedSpotlight } from "@/components/home/FeaturedSpotlight";
 import { HowItWorks } from "@/components/home/HowItWorks";
@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FeaturedConversation />
-      <WhyVerseLine />
+      <WhyBookCrew />
       <WhatWeDo />
       <FeaturedSpotlight />
       <HowItWorks />

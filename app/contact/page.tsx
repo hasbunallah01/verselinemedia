@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with VerseLine Media.",
+  description: "Get in touch with The Book Crew Readers Community.",
 };
 
 const socialLinks = [
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold">{s.label}</p>
-                  <p className="text-xs text-charcoal/60">@verselinemedia</p>
+                  <p className="text-xs text-charcoal/60">@thebookcrew</p>
                 </div>
               </a>
             ))}

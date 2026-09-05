@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story, mission, values, and standards behind VerseLine Media — a premium media platform connecting authors and readers through live conversations and editorial storytelling.",
+    "The story, mission, values, and standards behind The Book Crew Readers Community — a premium media platform connecting authors and readers through live conversations and editorial storytelling.",
 };
 
 export default function AboutPage() {
@@ -71,7 +71,7 @@ export default function AboutPage() {
       {/* 14. Behind the Spotlight */}
       <SpotlightGallery />
 
-      {/* 15. Why Authors Choose VerseLine Media */}
+      {/* 15. Why Authors Choose The Book Crew */}
       <ValueGrid {...whyChooseUs} columns={3} background="ivory" />
 
       {/* 17. Closing CTA */}

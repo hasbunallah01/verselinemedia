@@ -1,16 +1,17 @@
 export const site = {
-  name: "VerseLine Media",
+  name: "The Book Crew Readers Community",
+  shortName: "The Book Crew",
   tagline: "A Home for Storytellers",
   description:
-    "VerseLine Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
-  url: "https://verselinemedia.online",
-  email: "hello@verselinemedia.online",
+    "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
+  url: "https://thebookcrew.online",
+  email: "the.book.crew.community@gmail.com",
   phone: "",
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
     facebook: "https://www.facebook.com/share/1GYLp3c4Zs/",
-    youtube: "https://youtube.com/@verselinemedia",
+    youtube: "https://youtube.com/@thebookcrew",
   },
   nav: [
     { label: "Home", href: "/" },

@@ -7,7 +7,7 @@ export const aboutHero = {
   eyebrow: "About Us",
   title: "Honouring the voice behind every book.",
   description:
-    "We are VerseLine Media — a platform for authors and readers to connect through live conversations, storytelling, and meaningful visibility.",
+    "We are The Book Crew Readers Community — a platform for authors and readers to connect through live conversations, storytelling, and meaningful visibility.",
   primaryCta: { label: "Our Process", href: "#journey" },
   secondaryCta: { label: "Share Your Story", href: "/contact" },
   image:
@@ -18,9 +18,9 @@ export const aboutHero = {
 export const ourStory = {
   badge: "01",
   eyebrow: "Our Story",
-  title: "The story behind VerseLine Media.",
+  title: "The story behind The Book Crew.",
   paragraphs: [
-    "VerseLine Media was created from a simple belief — every author has a story worth hearing, and every reader deserves the chance to discover it.",
+    "The Book Crew Readers Community was created from a simple belief — every author has a story worth hearing, and every reader deserves the chance to discover it.",
     "We saw how many powerful stories remained unheard because authors didn't have the right platform. So we built a space where conversations matter, voices are amplified, and stories create real impact.",
     "We are more than a platform. We are a movement of storytellers, readers, and dreamers who believe in the power of words.",
   ],
@@ -34,8 +34,8 @@ export const whoWeAre = {
   eyebrow: "Who We Are",
   title: "We exist so the right story reaches the people who need to hear it.",
   paragraphs: [
-    "We built VerseLine Media to bridge the gap between authors and readers through meaningful live conversations and visual storytelling.",
-    "We are active, intentional, and deeply invested in the authors we feature. When you join VerseLine, our team works to present you to our audience in the most authentic and impactful way possible.",
+    "We built The Book Crew Readers Community to bridge the gap between authors and readers through meaningful live conversations and visual storytelling.",
+    "We are active, intentional, and deeply invested in the authors we feature. When you join The Book Crew, our team works to present you to our audience in the most authentic and impactful way possible.",
     "Our community is growing, our conversations are real, and our commitment to amplifying author voices has never been stronger.",
   ],
   image:
@@ -157,7 +157,7 @@ export const whatMakesUsDifferent = {
 export const journey = {
   badge: "07",
   eyebrow: "Meet the Experience",
-  title: "The VerseLine journey.",
+  title: "The Book Crew journey.",
   steps: [
     {
       step: "01",
@@ -186,7 +186,7 @@ export const journey = {
     {
       step: "05",
       icon: "book-open",
-      title: "Become Part of the VerseLine Library",
+      title: "Become Part of The Book Crew Library",
       description: "Your feature lives on in our library for lasting impact.",
     },
   ],
@@ -293,7 +293,7 @@ export const rules = {
       icon: "clapperboard",
       title: "Media Usage",
       description:
-        "Recorded features may be shared across VerseLine channels.",
+        "Recorded features may be shared across The Book Crew channels.",
     },
     {
       icon: "badge-check",
@@ -338,7 +338,7 @@ export const gallery = {
 
 export const whyChooseUs = {
   badge: "13",
-  eyebrow: "Why Authors Choose VerseLine Media",
+  eyebrow: "Why Authors Choose The Book Crew",
   title: "Built for authors, loved by readers.",
   items: [
     {
@@ -369,7 +369,7 @@ export const whyChooseUs = {
     {
       icon: "book-open",
       title: "Long-Term Visibility",
-      description: "Features stay discoverable in the VerseLine library.",
+      description: "Features stay discoverable in The Book Crew library.",
     },
   ],
 } as const;

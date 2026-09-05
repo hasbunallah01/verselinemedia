@@ -1,6 +1,6 @@
-# VerseLine Media
+# The Book Crew Readers Community
 
-A premium editorial-quality website for VerseLine Media — a home for storytellers.
+A premium editorial-quality website for The Book Crew Readers Community — a home for storytellers.
 
 Built with **Next.js 15 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Lucide Icons**.
 
@@ -64,7 +64,7 @@ The fastest path:
 
 1. Push the repo to GitHub (already done in this repo).
 2. Go to [vercel.com/new](https://vercel.com/new).
-3. Import this repository (`hasbunallah01/verselinemedia`).
+3. Import this repository (`hasbunallah01/thebookcrew`).
 4. Vercel auto-detects Next.js — leave the defaults.
 5. Click **Deploy**. Done.
 
@@ -114,4 +114,4 @@ The home page picks it up automatically.
 
 ## 📜 License
 
-© VerseLine Media. All rights reserved.
+© The Book Crew Readers Community. All rights reserved.

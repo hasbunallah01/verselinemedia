@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Feather } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -7,43 +7,52 @@ interface LogoProps {
   className?: string;
 }
 
-/** VerseLine Media wordmark with leaf/feather emblem. */
+/**
+ * The Book Crew Readers Community logo.
+ * Uses the brand image asset; variant only controls a subtle background
+ * ring around the badge in the light/dark contexts.
+ */
 export function Logo({ variant = "dark", className }: LogoProps) {
   const isLight = variant === "light";
   return (
     <Link
       href="/"
-      aria-label="VerseLine Media — Home"
+      aria-label="The Book Crew Readers Community — Home"
       className={cn("group inline-flex items-center gap-2.5", className)}
     >
       <span
         className={cn(
-          "grid h-9 w-9 place-items-center rounded-full ring-1 transition",
+          "relative block h-10 w-10 overflow-hidden rounded-full ring-1 transition sm:h-11 sm:w-11",
           isLight
-            ? "bg-white/10 ring-white/25 group-hover:bg-white/15"
-            : "bg-forest/5 ring-forest/25 group-hover:bg-forest/10",
+            ? "ring-white/30 group-hover:ring-white/50"
+            : "ring-forest/25 group-hover:ring-forest/40",
         )}
       >
-        <Feather
-          className={cn("h-4 w-4", isLight ? "text-bronze-200" : "text-forest")}
+        <Image
+          src="/bookcrew-logo.webp"
+          alt="The Book Crew Readers Community"
+          fill
+          sizes="44px"
+          className="object-cover"
+          priority
         />
       </span>
       <span className="flex flex-col leading-none">
         <span
           className={cn(
-            "font-display text-base font-semibold tracking-[0.18em]",
+            "font-display text-[15px] font-semibold tracking-[0.16em] sm:text-base sm:tracking-[0.18em]",
             isLight ? "text-white" : "text-forest",
           )}
         >
-          VERSELINE
+          THE BOOK CREW
         </span>
         <span
           className={cn(
-            "mt-0.5 text-[9px] font-medium uppercase tracking-[0.5em]",
+            "mt-0.5 text-[9px] font-medium uppercase tracking-[0.32em] sm:tracking-[0.4em]",
             isLight ? "text-white/70" : "text-bronze",
           )}
         >
-          Media
+          Readers Community
         </span>
       </span>
     </Link>

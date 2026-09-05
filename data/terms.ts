@@ -4,7 +4,7 @@ export const termsHero = {
   eyebrow: "Terms & Conditions",
   title: "Terms & Conditions",
   description:
-    "These Terms & Conditions explain the responsibilities, expectations, and agreements that apply when using VerseLine Media. By accessing our website, submitting your information, or participating in our services, you agree to these terms.",
+    "These Terms & Conditions explain the responsibilities, expectations, and agreements that apply when using The Book Crew Readers Community. By accessing our website, submitting your information, or participating in our services, you agree to these terms.",
   cta: { label: "Need Help? Contact Us", href: "/contact" },
   image:
     "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?auto=format&fit=crop&w=1400&q=80",
@@ -30,7 +30,7 @@ export const termsSections: TermItem[] = [
   {
     number: "02",
     icon: "users",
-    title: "Who Can Use VerseLine Media",
+    title: "Who Can Use The Book Crew Readers Community",
     description:
       "Our platform is designed for authors, readers, publishers, literary professionals, and visitors using it lawfully and in good faith.",
   },
@@ -50,7 +50,7 @@ export const termsSections: TermItem[] = [
   {
     number: "04",
     icon: "shield-check",
-    title: "VerseLine Media Responsibilities",
+    title: "The Book Crew Readers Community Responsibilities",
     description: "In return, we are committed to:",
     points: [
       "Reviewing submissions fairly",
@@ -79,14 +79,14 @@ export const termsSections: TermItem[] = [
     icon: "book-open",
     title: "Intellectual Property",
     description:
-      "You retain full ownership of your books and original work. By submitting materials, you grant VerseLine Media a non-exclusive promotional licence to use them for interviews and promotion only.",
+      "You retain full ownership of your books and original work. By submitting materials, you grant The Book Crew Readers Community a non-exclusive promotional licence to use them for interviews and promotion only.",
   },
   {
     number: "08",
     icon: "badge-check",
     title: "Payments (If Applicable)",
     description:
-      "Some services may require payment. Details always come through official VerseLine Media channels — never send money to unofficial accounts. Fees are non-refundable unless otherwise stated.",
+      "Some services may require payment. Details always come through official The Book Crew Readers Community channels — never send money to unofficial accounts. Fees are non-refundable unless otherwise stated.",
   },
   {
     number: "09",
@@ -135,7 +135,7 @@ export const termsSections: TermItem[] = [
     icon: "mail",
     title: "Contact Us",
     description:
-      "Have questions about these terms? We're happy to help — reach out any time at hello@verselinemedia.online.",
+      "Have questions about these terms? We're happy to help — reach out any time at the.book.crew.community@gmail.com.",
   },
 ];
 

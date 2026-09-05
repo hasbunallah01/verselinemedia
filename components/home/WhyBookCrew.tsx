@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { whyVerseLine } from "@/data/home";
+import { whyBookCrew } from "@/data/home";
 import { iconMap } from "@/components/home/IconMap";
 
 /**
  * Two-column from md up: smaller image left, all content right.
  * Below md: image above content (unchanged mobile behavior).
  */
-export function WhyVerseLine() {
+export function WhyBookCrew() {
   return (
-    <section id="why-verseline" className="section bg-ivory">
+    <section id="why-bookcrew" className="section bg-ivory">
       <div className="container-wide grid items-center gap-10 md:grid-cols-12 lg:gap-12">
         {/* Image — reduced, hero-like proportion */}
         <motion.div
@@ -22,8 +22,8 @@ export function WhyVerseLine() {
           className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-card md:col-span-5 lg:col-span-4"
         >
           <Image
-            src={whyVerseLine.image}
-            alt={whyVerseLine.imageAlt}
+            src={whyBookCrew.image}
+            alt={whyBookCrew.imageAlt}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover"
@@ -40,10 +40,10 @@ export function WhyVerseLine() {
             transition={{ duration: 0.5 }}
             className="text-center font-display text-3xl font-bold md:text-left md:text-4xl"
           >
-            {whyVerseLine.title}
+            {whyBookCrew.title}
           </motion.h2>
           <div className="mt-8 grid gap-8 sm:grid-cols-3 md:grid-cols-1 md:gap-6 lg:mt-10 lg:grid-cols-3 lg:gap-8">
-            {whyVerseLine.items.map((item, i) => {
+            {whyBookCrew.items.map((item, i) => {
               const Icon = iconMap[item.icon];
               return (
                 <motion.div

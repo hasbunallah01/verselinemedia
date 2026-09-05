@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "author interviews",
     "book features",
     "storytellers",
-    "VerseLine",
+    "The Book Crew",
     "publishing",
   ],
   authors: [{ name: site.name }],

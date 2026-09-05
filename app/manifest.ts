@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "VerseLine Media",
-    short_name: "VerseLine",
+    name: "The Book Crew Readers Community",
+    short_name: "The Book Crew",
     description:
       "A premium media platform connecting authors and readers through live conversations and editorial storytelling.",
     start_url: "/",
